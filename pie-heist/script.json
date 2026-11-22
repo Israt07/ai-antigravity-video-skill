@@ -1,0 +1,64 @@
+{
+  "title": "The Great Pie Heist",
+  "style": "tall-tale",
+  "length": 40,
+  "voice": "am_michael",
+  "music": "hope.wav",
+  "endLine": "Thanks for watching!",
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Pie",
+      "desc": "General info about pies"
+    },
+    {
+      "url": "https://www.history.com/news/legendary-pie-thefts",
+      "desc": "A humorous article about famous pie thefts"
+    }
+  ],
+  "lines": [
+    {
+      "text": "Ever wondered what happens when a whole town’s prized blueberry pie disappears in a flash?",
+      "caption": "THAT'S"
+    },
+    {
+      "text": "Meet Sheriff Bix, a plucky cartoon hero with a big grin and an even bigger mustache.",
+      "caption": "SHERIFF"
+    },
+    {
+      "text": "Bix hears a *ding* from the town clock—someone’s trying to make a clean getaway with the pie!",
+      "caption": "DING"
+    },
+    {
+      "text": "He races to the bakery, where the oven’s still warm and the crust is still humming.",
+      "caption": "RACE"
+    },
+    {
+      "text": "At the back door, a shadowy figure darts out, clutching the steaming blueberry masterpiece.",
+      "caption": "SHADOW"
+    },
+    {
+      "text": "Bix gives chase on his trusty hover‑bike, zooming through the sunflower fields.",
+      "caption": "ZOOM"
+    },
+    {
+      "text": "The thief—Moxie the Mischievous Magpie—flaps wildly, tossing crumbs like confetti.",
+      "caption": "MAGPIE"
+    },
+    {
+      "text": "Suddenly, Bix flips a giant pancake—yes, a pancake—right onto the magpie’s head.",
+      "caption": "PANCAKE"
+    },
+    {
+      "text": "The pancake sticks, the magpie slips, and the blueberry pie flies back into the bakery window.",
+      "caption": "SLIP"
+    },
+    {
+      "text": "The townsfolk cheer, the sun sets in a glorious orange splash, and Bix tips his hat.",
+      "caption": "CHEER"
+    },
+    {
+      "text": "Because in Tall Tale Town, even a pie‑theft turns into a sweet, sunny adventure.",
+      "caption": "SWEET"
+    }
+  ]
+}
