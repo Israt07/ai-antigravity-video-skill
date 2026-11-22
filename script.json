@@ -1,0 +1,59 @@
+{
+  "title": "Inside Your Mind When a Song Plays",
+  "voice": "am_onyx",
+  "speed": 0.95,
+  "lead": 0.6,
+  "outro": 1.4,
+  "gap": 0.42,
+  "music": "hope.wav",
+  "sources": [
+    "Wikipedia, 'Music and the brain' (en.wikipedia.org/wiki/Music_and_the_brain): studies on how music activates brain regions."
+  ],
+  "lines": [
+    {
+      "text": "When the first note hits, a spark lights up the auditory cortex.",
+      "caps": "*When *first *note | hits, *spark lights up | *auditory cortex."
+    },
+    {
+      "text": "Neurons fire, sending ripples through the hippocampus.",
+      "caps": "*Neurons *fire, | sending *ripples through | *hippocampus."
+    },
+    {
+      "text": "Memories surface like glowing fireflies.",
+      "caps": "*Memories *surface | like *glowing *fireflies."
+    },
+    {
+      "text": "Emotions surge, painting the amygdala red.",
+      "caps": "*Emotions *surge, | painting *amygdala *red."
+    },
+    {
+      "text": "The prefrontal cortex lights up, planning the next beat.",
+      "caps": "*Prefrontal *cortex *lights up, | *planning *next *beat."
+    },
+    {
+      "text": "Your body moves, motor cortex dancing.",
+      "caps": "*Your *body *moves, | *motor cortex *dancing."
+    },
+    {
+      "text": "All of this inside you, invisible to the eye.",
+      "caps": "*All of *this *inside you, | *invisible to *the eye.",
+      "gap": 0.3
+    },
+    {
+      "text": "The story fades.",
+      "caps": "*The story fades."
+    },
+    {
+      "text": "The end.",
+      "caps": "*The end."
+    },
+    {
+      "text": "The video ends.",
+      "caps": "*The video ends."
+    },
+    {
+      "text": "Thanks for watching.",
+      "caps": "*Thanks for watching."
+    }
+  ]
+}

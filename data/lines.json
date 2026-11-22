@@ -1,0 +1,73 @@
+{
+ "duration": 31.044,
+ "voice": "am_onyx",
+ "speed": 0.95,
+ "lines": [
+  {
+   "i": 0,
+   "text": "When the first note hits, a spark lights up the auditory cortex.",
+   "start": 0.6,
+   "end": 4.207
+  },
+  {
+   "i": 1,
+   "text": "Neurons fire, sending ripples through the hippocampus.",
+   "start": 4.627,
+   "end": 7.751
+  },
+  {
+   "i": 2,
+   "text": "Memories surface like glowing fireflies.",
+   "start": 8.171,
+   "end": 10.793
+  },
+  {
+   "i": 3,
+   "text": "Emotions surge, painting the amygdala red.",
+   "start": 11.213,
+   "end": 13.933
+  },
+  {
+   "i": 4,
+   "text": "The prefrontal cortex lights up, planning the next beat.",
+   "start": 14.353,
+   "end": 17.199
+  },
+  {
+   "i": 5,
+   "text": "Your body moves, motor cortex dancing.",
+   "start": 17.619,
+   "end": 19.967
+  },
+  {
+   "i": 6,
+   "text": "All of this inside you, invisible to the eye.",
+   "start": 20.387,
+   "end": 23.095
+  },
+  {
+   "i": 7,
+   "text": "The story fades.",
+   "start": 23.395,
+   "end": 24.773
+  },
+  {
+   "i": 8,
+   "text": "The end.",
+   "start": 25.193,
+   "end": 25.926
+  },
+  {
+   "i": 9,
+   "text": "The video ends.",
+   "start": 26.346,
+   "end": 27.596
+  },
+  {
+   "i": 10,
+   "text": "Thanks for watching.",
+   "start": 28.017,
+   "end": 29.224
+  }
+ ]
+}
