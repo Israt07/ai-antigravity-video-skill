@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faceless Shorts Studio</title>
+<style>
+/* ── Reset & Base ──────────────────────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;
+  --red:#f85149;--orange:#d29922;--purple:#bc8cff;
+  --radius:10px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+html,body{height:100%;font-family:var(--font);background:var(--bg);color:var(--text)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button{cursor:pointer;border:none;border-radius:var(--radius);font:inherit;transition:all .15s}
+input,textarea,select{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;font:inherit;width:100%;transition:border .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:70px}
+
+/* ── Layout ────────────────────────────────────────────────────────────── */
+.app{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:300px;min-width:260px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto}
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.main-scroll{flex:1;overflow-y:auto;padding:28px 36px}
+
+/* ── Sidebar ───────────────────────────────────────────────────────────── */
+.logo{padding:20px 20px 12px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px}
+.logo span{font-size:24px}
+.sidebar-section{padding:12px 16px;border-top:1px solid var(--border)}
+.sidebar-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.project-list{list-style:none}
+.project-list li{padding:8px 12px;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:8px;font-size:14px;transition:background .15s}
+.project-list li:hover{background:var(--bg3)}
+.project-list li.active{background:var(--accent);color:#fff}
+.project-list li .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.project-list li .dot.done{background:var(--green)}
+.project-list li .dot.pending{background:var(--muted)}
+.btn-new{background:var(--accent);color:#fff;width:100%;padding:10px;font-weight:600;font-size:14px;margin-top:8px}
+.btn-new:hover{opacity:.85}
+
+/* ── New Project Modal ─────────────────────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px;width:620px;max-height:85vh;overflow-y:auto;padding:28px 32px}
+.modal h2{font-size:20px;margin-bottom:20px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.style-card{border:2px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center;cursor:pointer;transition:all .15s;font-size:13px}
+.style-card:hover{border-color:var(--accent)}
+.style-card.selected{border-color:var(--accent);background:rgba(88,166,255,.1)}
+.style-card img{width:100%;border-radius:6px;margin-bottom:6px}
+.btn-row{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.btn-primary{background:var(--accent);color:#fff;padding:10px 24px;font-weight:600}
+.btn-primary:hover{opacity:.85}
+.btn-secondary{background:var(--bg3);color:var(--text);padding:10px 24px;font-weight:500;border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--border)}
+
+/* ── Main Content Panels ───────────────────────────────────────────────── */
+.panel{display:none}
+.panel.active{display:block}
+
+/* Welcome */
+.welcome{text-align:center;padding:80px 40px}
+.welcome h1{font-size:32px;margin-bottom:12px}
+.welcome p{color:var(--muted);font-size:16px;max-width:500px;margin:0 auto}
+
+/* Project View */
+.project-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.project-header h1{font-size:24px}
+.btn-run{background:var(--green);color:#000;padding:10px 24px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px}
+.btn-run:hover{opacity:.85}
+.btn-run:disabled{opacity:.4;cursor:not-allowed}
+.btn-step{background:var(--bg3);color:var(--text);padding:7px 16px;font-size:13px;font-weight:500;border:1px solid var(--border)}
+.btn-step:hover{background:var(--border)}
+
+/* Tabs */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:24px}
+.tab{padding:10px 20px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* Pipeline Steps */
+.pipeline{display:flex;flex-direction:column;gap:4px;margin-bottom:24px}
+.pipeline-step{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--bg2);border-radius:var(--radius);border:1px solid var(--border);transition:all .2s}
+.pipeline-step.running{border-color:var(--accent);box-shadow:0 0 12px rgba(88,166,255,.15)}
+.pipeline-step.done{border-color:var(--green)}
+.pipeline-step.error{border-color:var(--red)}
+.step-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.step-icon.pending{background:var(--bg3);color:var(--muted)}
+.step-icon.running{background:rgba(88,166,255,.15);color:var(--accent);animation:pulse 1.5s infinite}
+.step-icon.done{background:rgba(63,185,80,.15);color:var(--green)}
+.step-icon.error{background:rgba(248,81,73,.15);color:var(--red)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.step-info{flex:1;min-width:0}
+.step-name{font-weight:600;font-size:14px}
+.step-detail{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Log viewer */
+.log-box{background:#010409;border:1px solid var(--border);border-radius:var(--radius);padding:16px;font-family:'Cascadia Code','Fira Code',monospace;font-size:12px;line-height:1.6;max-height:300px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;color:var(--muted)}
+.log-box .err{color:var(--red)}
+.log-box .ok{color:var(--green)}
+
+/* Script editor */
+.script-editor{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.script-editor textarea{min-height:400px;font-family:'Cascadia Code','Fira Code',monospace;font-size:13px;line-height:1.5}
+.script-preview{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;overflow-y:auto;max-height:500px}
+.script-preview .line{padding:6px 10px;border-radius:6px;margin-bottom:4px;font-size:13px;border-left:3px solid var(--accent)}
+.script-preview .line:nth-child(even){border-left-color:var(--purple)}
+.script-preview .line .num{color:var(--muted);font-size:11px;margin-right:8px}
+
+/* Shots code */
+.code-editor textarea{width:100%;min-height:500px;font-family:'Cascadia Code','Fira Code',monospace;font-size:13px;line-height:1.5}
+
+/* Contact sheet & video */
+.media-container{text-align:center}
+.media-container img{max-width:100%;border-radius:var(--radius);border:1px solid var(--border)}
+.media-container video{max-width:100%;max-height:600px;border-radius:var(--radius);border:1px solid var(--border)}
+
+/* Toast */
+.toast{position:fixed;bottom:20px;right:20px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;font-size:14px;z-index:200;transform:translateY(80px);opacity:0;transition:all .3s}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{border-color:var(--green)}
+.toast.error{border-color:var(--red)}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  .sidebar{width:220px;min-width:200px}
+  .main-scroll{padding:16px}
+  .script-editor{grid-template-columns:1fr}
+  .style-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- ── Sidebar ─────────────────────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="logo"><span>🎬</span> Faceless Studio</div>
+    <div class="sidebar-section">
+      <h3>Projects</h3>
+      <ul class="project-list" id="projectList"></ul>
+      <button class="btn-new" id="btnNewProject">+ New Video</button>
+    </div>
+  </aside>
+
+  <!-- ── Main ─────────────────────────────────────────────────────────── -->
+  <div class="main">
+    <div class="main-scroll">
+      <!-- Welcome panel -->
+      <div class="panel active" id="panelWelcome">
+        <div class="welcome">
+          <h1>🎬 Faceless Shorts Studio</h1>
+          <p>Create narrated faceless YouTube Shorts with AI voice, 3D visuals, and word-synced captions — all running locally on your computer.</p>
+          <br>
+          <button class="btn-primary" onclick="document.getElementById('btnNewProject').click()">Create Your First Video</button>
+        </div>
+      </div>
+
+      <!-- Project panel -->
+      <div class="panel" id="panelProject">
+        <div class="project-header">
+          <h1 id="projectTitle">—</h1>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn-step" onclick="runStep('narration')">🎙️ Narration</button>
+            <button class="btn-step" onclick="runStep('alignment')">📊 Alignment</button>
+            <button class="btn-step" onclick="runStep('check')">✅ Check</button>
+            <button class="btn-step" onclick="runStep('cues')">🔔 Cues</button>
+            <button class="btn-step" onclick="runStep('mix')">🎵 Mix</button>
+            <button class="btn-step" onclick="runStep('sheet')">📸 Sheet</button>
+            <button class="btn-step" onclick="runStep('render')">🎥 Render</button>
+            <button class="btn-run" id="btnRunAll" onclick="runAll()">▶ Run All Steps</button>
+          </div>
+        </div>
+
+        <!-- Pipeline Progress -->
+        <div class="pipeline" id="pipeline">
+          <div class="pipeline-step" data-step="narration">
+            <div class="step-icon pending">🎙️</div>
+            <div class="step-info"><div class="step-name">Generate Narration</div><div class="step-detail">Kokoro TTS → narration.wav + line timings</div></div>
+          </div>
+          <div class="pipeline-step" data-step="alignment">
+            <div class="step-icon pending">📊</div>
+            <div class="step-info"><div class="step-name">Word Alignment</div><div class="step-detail">Whisper → word-level timestamps</div></div>
+          </div>
+          <div class="pipeline-step" data-step="check">
+            <div class="step-icon pending">✅</div>
+            <div class="step-info"><div class="step-name">Verify Shots</div><div class="step-detail">Headless Chrome checks every frame renders</div></div>
+          </div>
+          <div class="pipeline-step" data-step="cues">
+            <div class="step-icon pending">🔔</div>
+            <div class="step-info"><div class="step-name">Sound Cues</div><div class="step-detail">Extract cue list from shot code</div></div>
+          </div>
+          <div class="pipeline-step" data-step="mix">
+            <div class="step-icon pending">🎵</div>
+            <div class="step-info"><div class="step-name">Audio Mix</div><div class="step-detail">Voice + music + sound effects → mix.wav</div></div>
+          </div>
+          <div class="pipeline-step" data-step="sheet">
+            <div class="step-icon pending">📸</div>
+            <div class="step-info"><div class="step-name">Contact Sheet</div><div class="step-detail">Scene overview preview image</div></div>
+          </div>
+          <div class="pipeline-step" data-step="render">
+            <div class="step-icon pending">🎥</div>
+            <div class="step-info"><div class="step-name">Render Video</div><div class="step-detail">1080×1920 30fps MP4 via headless Chrome + ffmpeg</div></div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" id="tabs">
+          <div class="tab active" data-tab="logs">📋 Logs</div>
+          <div class="tab" data-tab="script">📝 Script</div>
+          <div class="tab" data-tab="shots">🎬 Shots Code</div>
+          <div class="tab" data-tab="preview">👁️ Preview</div>
+          <div class="tab" data-tab="video">🎞️ Video</div>
+        </div>
+
+        <!-- Tab: Logs -->
+        <div class="tab-panel active" data-tab="logs">
+          <div class="log-box" id="logBox">Waiting for pipeline to start...\n</div>
+        </div>
+
+        <!-- Tab: Script -->
+        <div class="tab-panel" data-tab="script">
+          <div class="script-editor">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <label style="font-size:13px;font-weight:600;color:var(--muted)">SCRIPT.JSON</label>
+                <button class="btn-step" id="btnSaveScript" onclick="saveScript()">💾 Save</button>
+              </div>
+              <textarea id="scriptEditor" spellcheck="false"></textarea>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:8px">PREVIEW</label>
+              <div class="script-preview" id="scriptPreview"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Shots Code -->
+        <div class="tab-panel" data-tab="shots">
+          <div class="code-editor">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <label style="font-size:13px;font-weight:600;color:var(--muted)">SRC/SHOTS.JS</label>
+              <button class="btn-step" id="btnSaveShots" onclick="saveShots()">💾 Save</button>
+            </div>
+            <textarea id="shotsEditor" spellcheck="false"></textarea>
+          </div>
+        </div>
+
+        <!-- Tab: Preview (contact sheet) -->
+        <div class="tab-panel" data-tab="preview">
+          <div class="media-container">
+            <img id="sheetImg" src="" alt="Contact sheet" style="display:none">
+            <p id="sheetPlaceholder" style="color:var(--muted);padding:40px">Run the "Sheet" step to generate a contact sheet preview.</p>
+          </div>
+        </div>
+
+        <!-- Tab: Video -->
+        <div class="tab-panel" data-tab="video">
+          <div class="media-container">
+            <video id="videoPlayer" controls style="display:none"></video>
+            <p id="videoPlaceholder" style="color:var(--muted);padding:40px">Run the full pipeline or "Render" step to generate the video.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── New Project Modal ──────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h2>🎬 New Video</h2>
+    <div class="form-group">
+      <label>Title</label>
+      <input id="inputTitle" placeholder="e.g. The Man Who Declared War on Emus">
+    </div>
+    <div class="form-group">
+      <label>Hook</label>
+      <textarea id="inputHook" rows="2" placeholder='e.g. "Australia once sent soldiers to fight a bird. And the birds actually won."'></textarea>
+    </div>
+    <div class="form-group">
+      <label>Visual Description</label>
+      <textarea id="inputVisuals" rows="3" placeholder="e.g. Soldiers, giant cartoon emus, machine guns, birds running through fields, a dramatic military commander losing his mind."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Style</label>
+      <div class="style-grid" id="styleGrid"></div>
+    </div>
+    <div class="form-group">
+      <label>Voice</label>
+      <select id="inputVoice">
+        <option value="am_michael">am_michael – US male, steady explainer</option>
+        <option value="am_puck">am_puck – US male, lively, playful</option>
+        <option value="am_fenrir">am_fenrir – US male, deeper</option>
+        <option value="am_onyx">am_onyx – US male, low</option>
+        <option value="af_heart">af_heart – US female, warm</option>
+        <option value="af_bella">af_bella – US female, bright</option>
+        <option value="af_nicole">af_nicole – US female, soft</option>
+        <option value="bm_george">bm_george – UK male, documentary</option>
+        <option value="bm_fable">bm_fable – UK male, storyteller</option>
+        <option value="bf_emma">bf_emma – UK female, calm</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Music</label>
+      <select id="inputMusic">
+        <option value="bounce">Bounce (light comedy)</option>
+        <option value="bed">Bed (soft pad + arpeggio)</option>
+        <option value="tension">Tension (dark, mysterious)</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" id="btnCreate" onclick="createProject()">Create Project</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────
+let currentProject = null;
+let eventSource = null;
+let selectedStyle = null;
+
+// ── Init ──────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  loadProjects();
+  loadStyles();
+  setupTabs();
+});
+
+// ── Projects ──────────────────────────────────────────────────────────────
+async function loadProjects() {
+  const res = await fetch('/api/projects');
+  const projects = await res.json();
+  const list = document.getElementById('projectList');
+  list.innerHTML = '';
+  for (const p of projects) {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="dot ${p.hasVideo ? 'done' : 'pending'}"></span>${p.title}`;
+    li.onclick = () => openProject(p.name, p.title);
+    if (currentProject === p.name) li.classList.add('active');
+    list.appendChild(li);
+  }
+}
+
+async function openProject(name, title) {
+  currentProject = name;
+  document.getElementById('panelWelcome').classList.remove('active');
+  document.getElementById('panelProject').classList.add('active');
+  document.getElementById('projectTitle').textContent = title || name;
+  document.getElementById('logBox').textContent = 'Ready. Click a step button or "Run All Steps".\n';
+
+  // Reset pipeline steps
+  document.querySelectorAll('.pipeline-step').forEach(el => {
+    el.className = 'pipeline-step';
+    el.querySelector('.step-icon').className = 'step-icon pending';
+  });
+
+  // Update sidebar active
+  document.querySelectorAll('.project-list li').forEach(li => li.classList.remove('active'));
+  document.querySelectorAll('.project-list li').forEach(li => {
+    if (li.textContent.includes(title || name)) li.classList.add('active');
+  });
+
+  // Load script
+  try {
+    const r = await fetch(`/api/projects/${name}/script`);
+    if (r.ok) {
+      const script = await r.json();
+      document.getElementById('scriptEditor').value = JSON.stringify(script, null, 2);
+      renderScriptPreview(script);
+    }
+  } catch {}
+
+  // Load shots
+  try {
+    const r = await fetch(`/api/projects/${name}/shots`);
+    if (r.ok) document.getElementById('shotsEditor').value = await r.text();
+  } catch {}
+
+  // Load contact sheet
+  loadSheet();
+  // Load video
+  loadVideo();
+
+  // Setup SSE
+  if (eventSource) eventSource.close();
+  eventSource = new EventSource(`/api/projects/${name}/stream`);
+  eventSource.addEventListener('step', e => {
+    const d = JSON.parse(e.data);
+    updatePipelineStep(d.step, d.status, d.detail);
+  });
+  eventSource.addEventListener('log', e => {
+    const d = JSON.parse(e.data);
+    appendLog(d.text, d.step);
+  });
+  eventSource.addEventListener('pipeline', e => {
+    const d = JSON.parse(e.data);
+    if (d.status === 'done') {
+      showToast('Pipeline completed! 🎉', 'success');
+      loadSheet();
+      loadVideo();
+      loadProjects();
+    } else if (d.status === 'error') {
+      showToast('Pipeline failed: ' + d.detail, 'error');
+    }
+  });
+}
+
+// ── Pipeline controls ─────────────────────────────────────────────────────
+async function runStep(step) {
+  if (!currentProject) return;
+  document.getElementById('logBox').textContent = `Running ${step}...\n`;
+  updatePipelineStep(step, 'running', 'Starting...');
+  await fetch(`/api/projects/${currentProject}/run/${step}`, { method: 'POST' });
+}
+
+async function runAll() {
+  if (!currentProject) return;
+  document.getElementById('logBox').textContent = 'Starting full pipeline...\n';
+  document.querySelectorAll('.pipeline-step').forEach(el => {
+    el.className = 'pipeline-step';
+    el.querySelector('.step-icon').className = 'step-icon pending';
+    el.querySelector('.step-detail').textContent = 'Waiting...';
+  });
+  await fetch(`/api/projects/${currentProject}/run-all`, { method: 'POST' });
+}
+
+function updatePipelineStep(step, status, detail) {
+  const el = document.querySelector(`.pipeline-step[data-step="${step}"]`);
+  if (!el) return;
+  el.className = `pipeline-step ${status}`;
+  const icon = el.querySelector('.step-icon');
+  icon.className = `step-icon ${status}`;
+  if (detail) el.querySelector('.step-detail').textContent = detail;
+
+  // Auto-refresh content after steps complete
+  if (status === 'done') {
+    if (step === 'sheet') loadSheet();
+    if (step === 'render') { loadVideo(); loadProjects(); }
+    if (step === 'narration' || step === 'alignment') {
+      // Could reload word data
+    }
+  }
+}
+
+function appendLog(text, step) {
+  const box = document.getElementById('logBox');
+  const span = document.createElement('span');
+  if (text.includes('ERROR') || text.includes('FAILED')) span.className = 'err';
+  else if (text.includes('OK') || text.includes('done')) span.className = 'ok';
+  span.textContent = text;
+  box.appendChild(span);
+  box.scrollTop = box.scrollHeight;
+}
+
+// ── Script ────────────────────────────────────────────────────────────────
+function renderScriptPreview(script) {
+  const container = document.getElementById('scriptPreview');
+  container.innerHTML = '';
+  if (!script.lines) return;
+  script.lines.forEach((line, i) => {
+    const div = document.createElement('div');
+    div.className = 'line';
+    div.innerHTML = `<span class="num">${i + 1}</span>${line.text}`;
+    container.appendChild(div);
+  });
+}
+
+async function saveScript() {
+  if (!currentProject) return;
+  try {
+    const script = JSON.parse(document.getElementById('scriptEditor').value);
+    const r = await fetch(`/api/projects/${currentProject}/script`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(script),
+    });
+    if (r.ok) { showToast('Script saved!', 'success'); renderScriptPreview(script); }
+    else showToast('Failed to save script', 'error');
+  } catch (e) { showToast('Invalid JSON: ' + e.message, 'error'); }
+}
+
+async function saveShots() {
+  if (!currentProject) return;
+  const code = document.getElementById('shotsEditor').value;
+  const r = await fetch(`/api/projects/${currentProject}/shots`, {
+    method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code }),
+  });
+  if (r.ok) showToast('Shots saved!', 'success');
+  else showToast('Failed to save shots', 'error');
+}
+
+// ── Media ─────────────────────────────────────────────────────────────────
+function loadSheet() {
+  const img = document.getElementById('sheetImg');
+  const ph = document.getElementById('sheetPlaceholder');
+  img.src = `/api/projects/${currentProject}/sheet?t=${Date.now()}`;
+  img.onload = () => { img.style.display = 'block'; ph.style.display = 'none'; };
+  img.onerror = () => { img.style.display = 'none'; ph.style.display = 'block'; };
+}
+
+function loadVideo() {
+  const vid = document.getElementById('videoPlayer');
+  const ph = document.getElementById('videoPlaceholder');
+  vid.src = `/api/projects/${currentProject}/video?t=${Date.now()}`;
+  vid.onloadeddata = () => { vid.style.display = 'block'; ph.style.display = 'none'; };
+  vid.onerror = () => { vid.style.display = 'none'; ph.style.display = 'block'; };
+}
+
+// ── Tabs ──────────────────────────────────────────────────────────────────
+function setupTabs() {
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const name = tab.dataset.tab;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.dataset.tab === name));
+    });
+  });
+}
+
+// ── Styles ────────────────────────────────────────────────────────────────
+async function loadStyles() {
+  const res = await fetch('/api/styles');
+  const styles = await res.json();
+  const grid = document.getElementById('styleGrid');
+  grid.innerHTML = '';
+  for (const s of styles) {
+    const card = document.createElement('div');
+    card.className = 'style-card';
+    card.dataset.style = s.id;
+    card.innerHTML = `${s.hasThumb ? `<img src="/api/styles/${s.id}/thumb" alt="${s.name}">` : ''}<div>${s.name}</div>`;
+    card.onclick = () => {
+      grid.querySelectorAll('.style-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedStyle = s.id;
+    };
+    grid.appendChild(card);
+  }
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────────
+document.getElementById('btnNewProject').addEventListener('click', () => {
+  document.getElementById('modalOverlay').classList.add('open');
+});
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+async function createProject() {
+  const title = document.getElementById('inputTitle').value.trim();
+  const hook = document.getElementById('inputHook').value.trim();
+  const visuals = document.getElementById('inputVisuals').value.trim();
+  const voice = document.getElementById('inputVoice').value;
+  const music = document.getElementById('inputMusic').value;
+
+  if (!title) return showToast('Title is required', 'error');
+  if (!selectedStyle) return showToast('Pick a style', 'error');
+
+  const r = await fetch('/api/projects', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: title, style: selectedStyle }),
+  });
+
+  if (!r.ok) {
+    const err = await r.json();
+    return showToast(err.error || 'Failed to create project', 'error');
+  }
+
+  const { slug } = await r.json();
+
+  // Build a starter script.json with the user's input
+  const starterScript = {
+    title,
+    hook,
+    visuals,
+    voice,
+    speed: 1.05,
+    lead: 0.3,
+    outro: 1.2,
+    gap: 0.18,
+    music,
+    sources: [],
+    lines: [
+      { text: hook || "Write your script lines here." }
+    ]
+  };
+
+  await fetch(`/api/projects/${slug}/script`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(starterScript),
+  });
+
+  closeModal();
+  await loadProjects();
+  openProject(slug, title);
+  showToast(`Project "${title}" created!`, 'success');
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast show ${type}`;
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// Close modal on overlay click
+document.getElementById('modalOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+</script>
+</body>
+</html>
