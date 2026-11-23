@@ -2,9 +2,9 @@
   "id": "scene_05",
   "line_index": 4,
   "text": "আচ্ছা বাবা, আর ফোন দিমু না।",
-  "at": 48.89,
-  "end": 50.8,
-  "duration": 1.91,
+  "at": 43.03,
+  "end": 44.63,
+  "duration": 1.6,
   "audio": "scenes/scene_05.wav",
   "clip": "out/scene_05.mp4",
   "visuals": {
@@ -33,7 +33,7 @@
       "fontSize": 38,
       "maxChars": 16,
       "start": 0.2,
-      "end": 1.66
+      "end": 1.35
     }
   }
 }
