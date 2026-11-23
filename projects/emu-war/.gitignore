@@ -1,0 +1,11 @@
+# Large renders and caches
+out/*.mp4
+renders/*.mp4
+renders/*.png
+data/*.wav
+scenes/*.wav
+scenes/*.mp4
+*.mp4
+*.wav
+__pycache__/
+.integrity_baseline.json

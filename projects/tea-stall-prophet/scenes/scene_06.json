@@ -1,0 +1,114 @@
+{
+  "id": "scene_06",
+  "line_index": 5,
+  "text": "Chacha's joints only ache when the tea bill is about to arrive.",
+  "caps": "HIS JOINTS ONLY *ACHE | WHEN THE *TEA BILL | IS ABOUT TO *ARRIVE.",
+  "at": 22.129,
+  "end": 25.956,
+  "duration": 3.827,
+  "audio": "scenes/scene_06.wav",
+  "clip": "out/scene_06.mp4",
+  "words": [
+    {
+      "w": "Chacha's",
+      "line": 5,
+      "s": 22.42,
+      "e": 22.7
+    },
+    {
+      "w": "joints",
+      "line": 5,
+      "s": 22.74,
+      "e": 23.0
+    },
+    {
+      "w": "only",
+      "line": 5,
+      "s": 23.04,
+      "e": 23.4
+    },
+    {
+      "w": "ache",
+      "line": 5,
+      "s": 23.44,
+      "e": 23.84
+    },
+    {
+      "w": "when",
+      "line": 5,
+      "s": 23.88,
+      "e": 24.04
+    },
+    {
+      "w": "the",
+      "line": 5,
+      "s": 24.08,
+      "e": 24.18
+    },
+    {
+      "w": "tea",
+      "line": 5,
+      "s": 24.22,
+      "e": 24.4
+    },
+    {
+      "w": "bill",
+      "line": 5,
+      "s": 24.44,
+      "e": 24.64
+    },
+    {
+      "w": "is",
+      "line": 5,
+      "s": 24.68,
+      "e": 24.8
+    },
+    {
+      "w": "about",
+      "line": 5,
+      "s": 24.84,
+      "e": 25.04
+    },
+    {
+      "w": "to",
+      "line": 5,
+      "s": 25.08,
+      "e": 25.22
+    },
+    {
+      "w": "arrive.",
+      "line": 5,
+      "s": 25.26,
+      "e": 25.6
+    }
+  ],
+  "visuals": {
+    "background": "indoor-bench",
+    "characters": [
+      {
+        "id": "dadi",
+        "age": "elder",
+        "outfit": "saree",
+        "hat": "pallu",
+        "shirt": "#F7F4EC",
+        "pants": "#9A4141",
+        "glasses": true,
+        "baby": true,
+        "expr": "happy",
+        "anim": "talk-still",
+        "x": 320,
+        "y": 880,
+        "scale": 2.4
+      }
+    ],
+    "dialogue": {
+      "speakerId": "dadi",
+      "speakerX": 550,
+      "speakerY": 1130,
+      "text": "Chacha's joints only ache when the tea bill is about to arrive.",
+      "start": 0.15,
+      "end": 3.5,
+      "fontSize": 40
+    }
+  }
+}

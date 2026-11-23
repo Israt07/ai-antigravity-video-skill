@@ -1,0 +1,61 @@
+{
+  "id": "scene_02",
+  "line_index": 1,
+  "text": "And the birds completely destroyed them.",
+  "caps": "",
+  "at": 4.936,
+  "end": 7.14,
+  "duration": 2.204,
+  "audio": "scenes/scene_02.wav",
+  "clip": "out/scene_02.mp4",
+  "words": [
+    {
+      "w": "And",
+      "line": 1,
+      "s": 5.08,
+      "e": 5.08
+    },
+    {
+      "w": "the",
+      "line": 1,
+      "s": 5.12,
+      "e": 5.2
+    },
+    {
+      "w": "birds",
+      "line": 1,
+      "s": 5.24,
+      "e": 5.52
+    },
+    {
+      "w": "completely",
+      "line": 1,
+      "s": 5.56,
+      "e": 6.1
+    },
+    {
+      "w": "destroyed",
+      "line": 1,
+      "s": 6.14,
+      "e": 6.64
+    },
+    {
+      "w": "them.",
+      "line": 1,
+      "s": 6.68,
+      "e": 7.02
+    }
+  ],
+  "cues": [
+    {
+      "t": 4.956,
+      "type": "whoosh",
+      "gain": 0.6
+    },
+    {
+      "t": 6.14,
+      "type": "boing",
+      "gain": 0.7
+    }
+  ]
+}

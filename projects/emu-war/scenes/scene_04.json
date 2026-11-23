@@ -1,0 +1,84 @@
+{
+  "id": "scene_04",
+  "line_index": 3,
+  "text": "eating all the crops and stomping fences into toothpicks.",
+  "caps": "",
+  "at": 12.8,
+  "end": 16.46,
+  "duration": 3.66,
+  "audio": "scenes/scene_04.wav",
+  "clip": "out/scene_04.mp4",
+  "words": [
+    {
+      "w": "eating",
+      "line": 3,
+      "s": 12.86,
+      "e": 13.1
+    },
+    {
+      "w": "all",
+      "line": 3,
+      "s": 13.14,
+      "e": 13.5
+    },
+    {
+      "w": "the",
+      "line": 3,
+      "s": 13.54,
+      "e": 13.7
+    },
+    {
+      "w": "crops",
+      "line": 3,
+      "s": 13.74,
+      "e": 14.08
+    },
+    {
+      "w": "and",
+      "line": 3,
+      "s": 14.12,
+      "e": 14.34
+    },
+    {
+      "w": "stomping",
+      "line": 3,
+      "s": 14.38,
+      "e": 14.94
+    },
+    {
+      "w": "fences",
+      "line": 3,
+      "s": 14.98,
+      "e": 15.3
+    },
+    {
+      "w": "into",
+      "line": 3,
+      "s": 15.34,
+      "e": 15.6
+    },
+    {
+      "w": "toothpicks.",
+      "line": 3,
+      "s": 15.64,
+      "e": 16.18
+    }
+  ],
+  "cues": [
+    {
+      "t": 12.82,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 14.38,
+      "type": "slam",
+      "gain": 0.9
+    },
+    {
+      "t": 15.64,
+      "type": "thud",
+      "gain": 0.7
+    }
+  ]
+}

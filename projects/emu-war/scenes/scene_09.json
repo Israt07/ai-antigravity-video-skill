@@ -1,0 +1,66 @@
+{
+  "id": "scene_09",
+  "line_index": 8,
+  "text": "and had unexpectedly brilliant military tactics.",
+  "caps": "",
+  "at": 31.089,
+  "end": 34.34,
+  "duration": 3.251,
+  "audio": "scenes/scene_09.wav",
+  "clip": "out/scene_09.mp4",
+  "words": [
+    {
+      "w": "and",
+      "line": 8,
+      "s": 31.149,
+      "e": 31.24
+    },
+    {
+      "w": "had",
+      "line": 8,
+      "s": 31.28,
+      "e": 31.44
+    },
+    {
+      "w": "unexpectedly",
+      "line": 8,
+      "s": 31.48,
+      "e": 32.2
+    },
+    {
+      "w": "brilliant",
+      "line": 8,
+      "s": 32.24,
+      "e": 32.92
+    },
+    {
+      "w": "military",
+      "line": 8,
+      "s": 32.96,
+      "e": 33.42
+    },
+    {
+      "w": "tactics.",
+      "line": 8,
+      "s": 33.46,
+      "e": 34.0
+    }
+  ],
+  "cues": [
+    {
+      "t": 31.109,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 33.46,
+      "type": "chirp",
+      "gain": 0.7
+    },
+    {
+      "t": 33.56,
+      "type": "pop",
+      "gain": 0.6
+    }
+  ]
+}

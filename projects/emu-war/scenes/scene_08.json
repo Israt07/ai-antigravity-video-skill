@@ -1,0 +1,73 @@
+{
+  "id": "scene_08",
+  "line_index": 7,
+  "text": "Except emus can sprint forty miles an hour,",
+  "caps": "emus sprint | 40 miles | an hour,",
+  "at": 27.759,
+  "end": 31.089,
+  "duration": 3.33,
+  "audio": "scenes/scene_08.wav",
+  "clip": "out/scene_08.mp4",
+  "words": [
+    {
+      "w": "Except",
+      "line": 7,
+      "s": 27.9,
+      "e": 28.16
+    },
+    {
+      "w": "emus",
+      "line": 7,
+      "s": 28.2,
+      "e": 28.72
+    },
+    {
+      "w": "can",
+      "line": 7,
+      "s": 28.76,
+      "e": 28.96
+    },
+    {
+      "w": "sprint",
+      "line": 7,
+      "s": 29.0,
+      "e": 29.28
+    },
+    {
+      "w": "forty",
+      "line": 7,
+      "s": 29.28,
+      "e": 29.694
+    },
+    {
+      "w": "miles",
+      "line": 7,
+      "s": 29.74,
+      "e": 30.02
+    },
+    {
+      "w": "an",
+      "line": 7,
+      "s": 30.06,
+      "e": 30.3
+    },
+    {
+      "w": "hour,",
+      "line": 7,
+      "s": 30.34,
+      "e": 30.639
+    }
+  ],
+  "cues": [
+    {
+      "t": 27.779,
+      "type": "whoosh",
+      "gain": 0.6
+    },
+    {
+      "t": 29.74,
+      "type": "zip",
+      "gain": 0.8
+    }
+  ]
+}

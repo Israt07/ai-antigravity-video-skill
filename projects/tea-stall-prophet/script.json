@@ -1,0 +1,39 @@
+{
+  "title": "The Tea Stall Weather Prophet",
+  "style": "village2d",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lead": 0.35,
+  "outro": 0.8,
+  "gap": 0.35,
+  "lines": [
+    {
+      "text": "In our village, nobody checks the weather forecast on a smartphone.",
+      "caps": "IN OUR VILLAGE, | NOBODY *CHECKS | THE *WEATHER FORECAST"
+    },
+    {
+      "text": "Look at that crow flying sideways! In five minutes, a massive storm is coming!",
+      "caps": "LOOK AT THAT CROW! | IN FIVE *MINUTES, | MASSIVE *STORM COMING!"
+    },
+    {
+      "text": "Rahat immediately panicked and rushed to fill every bucket at the tube well.",
+      "caps": "RAHAT *PANICKED | AND RUSHED TO FILL | EVERY *BUCKET!"
+    },
+    {
+      "text": "Why are you sweating like a madman under the afternoon sun?",
+      "caps": "WHY ARE YOU *SWEATING | UNDER THE *AFTERNOON SUN?"
+    },
+    {
+      "text": "Chacha said his joints are aching, and that always means heavy rain!",
+      "caps": "CHACHA'S *JOINTS ARE ACHING, | THAT ALWAYS MEANS | HEAVY *RAIN!"
+    },
+    {
+      "text": "Chacha's joints only ache when the tea bill is about to arrive.",
+      "caps": "HIS JOINTS ONLY *ACHE | WHEN THE *TEA BILL | IS ABOUT TO *ARRIVE."
+    },
+    {
+      "text": "And just like that, the storm never came... and neither did Chacha's money.",
+      "caps": "THE STORM *NEVER CAME... | AND NEITHER DID | CHACHA'S *MONEY."
+    }
+  ]
+}

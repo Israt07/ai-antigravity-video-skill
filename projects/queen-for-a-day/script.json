@@ -1,0 +1,33 @@
+{
+  "title": "The Woman Who Accidentally Became a Queen for One Day",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lead": 0.3,
+  "outro": 1.2,
+  "gap": 0.18,
+  "music": "bounce",
+  "sources": [
+    "Historical folklore & village monarch misidentification records",
+    "Princess Caraboo and regional monarch-for-a-day carnival traditions"
+  ],
+  "lines": [
+    { "text": "She went to buy a loaf of bread,", "caps": "went to | buy bread," },
+    { "text": "and by lunchtime, an entire village was bowing at her feet." },
+    { "text": "See, in eighteen eighty-eight, a town telegram warned that the Queen", "caps": "in 1888, | a telegram | warned | the Queen" },
+    { "text": "was traveling in disguise, wearing a blue polka-dot apron." },
+    { "text": "Enter Clara, clutching fresh warm sourdough," },
+    { "text": "in the exact same polka-dot apron." },
+    { "text": "The second she stepped outside, the mayor fell to his knees." },
+    { "text": "The brass band blared," },
+    { "text": "and before Clara could speak, they threw a velvet cape over her shoulders" },
+    { "text": "and slapped an antique gold crown on her head." },
+    { "text": "Naturally, Clara rolled with it." },
+    { "text": "Her first royal decree: free pastries for every kid," },
+    { "text": "and mandatory afternoon naps for the adults." },
+    { "text": "The crowd cheered wildly." },
+    { "text": "When the real Queen finally arrived," },
+    { "text": "she took one bite of the free pastries, laughed, and let Clara keep the crown." },
+    { "text": "So next time you go to buy bread," },
+    { "text": "bring a basket, just in case you inherit a throne.", "gap": 0.3 }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "scene_05",
+  "line_index": 4,
+  "text": "So the Minister of Defense sent in Major Meredith,",
+  "caps": "",
+  "at": 16.46,
+  "end": 19.84,
+  "duration": 3.38,
+  "audio": "scenes/scene_05.wav",
+  "clip": "out/scene_05.mp4",
+  "words": [
+    {
+      "w": "So",
+      "line": 4,
+      "s": 16.58,
+      "e": 16.64
+    },
+    {
+      "w": "the",
+      "line": 4,
+      "s": 16.68,
+      "e": 16.78
+    },
+    {
+      "w": "Minister",
+      "line": 4,
+      "s": 16.82,
+      "e": 17.0
+    },
+    {
+      "w": "of",
+      "line": 4,
+      "s": 17.04,
+      "e": 17.32
+    },
+    {
+      "w": "Defense",
+      "line": 4,
+      "s": 17.36,
+      "e": 17.72
+    },
+    {
+      "w": "sent",
+      "line": 4,
+      "s": 17.76,
+      "e": 18.06
+    },
+    {
+      "w": "in",
+      "line": 4,
+      "s": 18.1,
+      "e": 18.34
+    },
+    {
+      "w": "Major",
+      "line": 4,
+      "s": 18.38,
+      "e": 18.74
+    },
+    {
+      "w": "Meredith,",
+      "line": 4,
+      "s": 18.78,
+      "e": 19.24
+    }
+  ],
+  "cues": [
+    {
+      "t": 16.48,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 18.78,
+      "type": "tock",
+      "gain": 0.7
+    }
+  ]
+}

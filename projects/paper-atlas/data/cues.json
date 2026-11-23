@@ -1,0 +1,167 @@
+{
+ "duration": 41.029,
+ "cues": [
+  {
+   "t": 0.1,
+   "type": "whoosh"
+  },
+  {
+   "t": 0.15,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 5.68,
+   "type": "whoosh"
+  },
+  {
+   "t": 5.78,
+   "type": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 9.94,
+   "type": "pop"
+  },
+  {
+   "t": 11.011,
+   "type": "whoosh"
+  },
+  {
+   "t": 13.94,
+   "type": "slide",
+   "dur": 1.6,
+   "gain": 0.7
+  },
+  {
+   "t": 15.591,
+   "type": "whoosh"
+  },
+  {
+   "t": 15.591,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 15.591,
+   "type": "sizzle",
+   "dur": 2
+  },
+  {
+   "t": 15.921,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 16.251,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 16.581,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 16.911,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 17.241,
+   "type": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 18.167,
+   "type": "whoosh"
+  },
+  {
+   "t": 18.267,
+   "type": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 20.44,
+   "type": "boing",
+   "gain": 0.5
+  },
+  {
+   "t": 21.419,
+   "type": "whoosh"
+  },
+  {
+   "t": 21.419,
+   "type": "sizzle",
+   "dur": 2.4,
+   "gain": 0.7
+  },
+  {
+   "t": 23.911,
+   "type": "whoosh"
+  },
+  {
+   "t": 23.991,
+   "type": "pop"
+  },
+  {
+   "t": 25.38,
+   "type": "pop"
+  },
+  {
+   "t": 28,
+   "type": "thud"
+  },
+  {
+   "t": 29.581,
+   "type": "whoosh"
+  },
+  {
+   "t": 30.62,
+   "type": "slam"
+  },
+  {
+   "t": 30.87,
+   "type": "thud",
+   "gain": 0.6
+  },
+  {
+   "t": 33.097,
+   "type": "whoosh"
+  },
+  {
+   "t": 33.347,
+   "type": "thud",
+   "gain": 0.35
+  },
+  {
+   "t": 33.497,
+   "type": "thud",
+   "gain": 0.35
+  },
+  {
+   "t": 33.647,
+   "type": "thud",
+   "gain": 0.35
+  },
+  {
+   "t": 33.797,
+   "type": "thud",
+   "gain": 0.35
+  },
+  {
+   "t": 33.947,
+   "type": "thud",
+   "gain": 0.35
+  },
+  {
+   "t": 35.74,
+   "type": "sparkle",
+   "dur": 1
+  },
+  {
+   "t": 37.098,
+   "type": "whoosh"
+  }
+ ]
+}

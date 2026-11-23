@@ -1,0 +1,31 @@
+{
+  "title": "The Man Who Declared War on Emus",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lead": 0.3,
+  "outro": 1.2,
+  "gap": 0.18,
+  "music": "bounce",
+  "sources": [
+    "Australian War Memorial, 'The Great Emu War of 1932' (Major G.P.W. Meredith and the Royal Australian Artillery deployed with two Lewis guns)",
+    "National Archives of Australia, 'Emu War military operations in the Campion district'"
+  ],
+  "lines": [
+    { "text": "In nineteen thirty-two, Australia officially declared war on birds.", "caps": "in 1932, | Australia | declared war | on birds." },
+    { "text": "And the birds completely destroyed them." },
+    { "text": "See, twenty thousand giant emus invaded Western Australia's wheat fields,", "caps": "20,000 emus | invaded | wheat fields," },
+    { "text": "eating all the crops and stomping fences into toothpicks." },
+    { "text": "So the Minister of Defense sent in Major Meredith," },
+    { "text": "armed with heavy automatic machine guns and ten thousand rounds.", "caps": "heavy | machine guns | and 10,000 | rounds." },
+    { "text": "The plan was simple: corner the flock and open fire." },
+    { "text": "Except emus can sprint forty miles an hour,", "caps": "emus sprint | 40 miles | an hour," },
+    { "text": "and had unexpectedly brilliant military tactics." },
+    { "text": "The moment soldiers aimed, the birds scattered into guerrilla squads," },
+    { "text": "ducking behind trees while the army's machine guns jammed." },
+    { "text": "One emu even took several hits, shrugged, and kept running." },
+    { "text": "Major Meredith lost his mind, reporting that emus were built like tanks." },
+    { "text": "After a month of chaos, the Australian army withdrew in defeat." },
+    { "text": "Proving that you should never, ever challenge a six-foot bird" },
+    { "text": "to a gunfight on its home turf.", "gap": 0.3 }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "scene_04",
+  "line_index": 3,
+  "text": "Why are you sweating like a madman under the afternoon sun?",
+  "caps": "WHY ARE YOU *SWEATING | UNDER THE *AFTERNOON SUN?",
+  "at": 14.126,
+  "end": 17.682,
+  "duration": 3.556,
+  "audio": "scenes/scene_04.wav",
+  "clip": "out/scene_04.mp4",
+  "words": [
+    {
+      "w": "Why",
+      "line": 3,
+      "s": 14.3,
+      "e": 14.36
+    },
+    {
+      "w": "are",
+      "line": 3,
+      "s": 14.4,
+      "e": 14.5
+    },
+    {
+      "w": "you",
+      "line": 3,
+      "s": 14.54,
+      "e": 14.64
+    },
+    {
+      "w": "sweating",
+      "line": 3,
+      "s": 14.68,
+      "e": 15.06
+    },
+    {
+      "w": "like",
+      "line": 3,
+      "s": 15.1,
+      "e": 15.38
+    },
+    {
+      "w": "a",
+      "line": 3,
+      "s": 15.42,
+      "e": 15.56
+    },
+    {
+      "w": "madman",
+      "line": 3,
+      "s": 15.6,
+      "e": 16.0
+    },
+    {
+      "w": "under",
+      "line": 3,
+      "s": 16.04,
+      "e": 16.3
+    },
+    {
+      "w": "the",
+      "line": 3,
+      "s": 16.34,
+      "e": 16.44
+    },
+    {
+      "w": "afternoon",
+      "line": 3,
+      "s": 16.48,
+      "e": 16.94
+    },
+    {
+      "w": "sun?",
+      "line": 3,
+      "s": 16.98,
+      "e": 17.36
+    }
+  ],
+  "visuals": {
+    "background": "house",
+    "characters": [
+      {
+        "id": "dadi",
+        "age": "elder",
+        "outfit": "saree",
+        "hat": "pallu",
+        "shirt": "#F7F4EC",
+        "pants": "#9A4141",
+        "blouse": "#C4985B",
+        "glasses": true,
+        "baby": true,
+        "expr": "neutral",
+        "anim": "talk-still",
+        "x": 120,
+        "y": 880,
+        "scale": 2.3
+      },
+      {
+        "id": "rahat",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#5D7A94",
+        "pants": "#889396",
+        "expr": "neutral",
+        "anim": "idle",
+        "x": 480,
+        "y": 880,
+        "scale": 2.35
+      }
+    ],
+    "dialogue": {
+      "speakerId": "dadi",
+      "speakerX": 350,
+      "speakerY": 1140,
+      "text": "Why are you sweating like a madman under the afternoon sun?",
+      "start": 0.15,
+      "end": 3.3,
+      "fontSize": 40
+    }
+  }
+}

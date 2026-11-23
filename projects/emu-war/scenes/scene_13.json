@@ -1,0 +1,102 @@
+{
+  "id": "scene_13",
+  "line_index": 12,
+  "text": "Major Meredith lost his mind, reporting that emus were built like tanks.",
+  "caps": "",
+  "at": 46.469,
+  "end": 51.448,
+  "duration": 4.979,
+  "audio": "scenes/scene_13.wav",
+  "clip": "out/scene_13.mp4",
+  "words": [
+    {
+      "w": "Major",
+      "line": 12,
+      "s": 46.7,
+      "e": 46.84
+    },
+    {
+      "w": "Meredith",
+      "line": 12,
+      "s": 46.88,
+      "e": 47.26
+    },
+    {
+      "w": "lost",
+      "line": 12,
+      "s": 47.3,
+      "e": 47.66
+    },
+    {
+      "w": "his",
+      "line": 12,
+      "s": 47.7,
+      "e": 47.94
+    },
+    {
+      "w": "mind,",
+      "line": 12,
+      "s": 47.98,
+      "e": 48.36
+    },
+    {
+      "w": "reporting",
+      "line": 12,
+      "s": 48.78,
+      "e": 49.22
+    },
+    {
+      "w": "that",
+      "line": 12,
+      "s": 49.26,
+      "e": 49.48
+    },
+    {
+      "w": "emus",
+      "line": 12,
+      "s": 49.52,
+      "e": 50.0
+    },
+    {
+      "w": "were",
+      "line": 12,
+      "s": 50.04,
+      "e": 50.2
+    },
+    {
+      "w": "built",
+      "line": 12,
+      "s": 50.24,
+      "e": 50.42
+    },
+    {
+      "w": "like",
+      "line": 12,
+      "s": 50.46,
+      "e": 50.7
+    },
+    {
+      "w": "tanks.",
+      "line": 12,
+      "s": 50.74,
+      "e": 51.16
+    }
+  ],
+  "cues": [
+    {
+      "t": 46.489,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 47.98,
+      "type": "boing",
+      "gain": 0.7
+    },
+    {
+      "t": 50.74,
+      "type": "thud",
+      "gain": 0.9
+    }
+  ]
+}

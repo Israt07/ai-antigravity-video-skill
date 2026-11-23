@@ -1,0 +1,72 @@
+[
+  {
+    "id": "scene_01",
+    "line": "In our village, nobody checks the weather forecast on a smartphone.",
+    "at": 0.0,
+    "end": 4.416,
+    "duration": 4.416,
+    "audio": "scenes/scene_01.wav",
+    "clip": "out/scene_01.mp4",
+    "visual_module": "scenes/scene_01.js"
+  },
+  {
+    "id": "scene_02",
+    "line": "Look at that crow flying sideways! In five minutes, a massive storm is coming!",
+    "at": 4.416,
+    "end": 9.611,
+    "duration": 5.195,
+    "audio": "scenes/scene_02.wav",
+    "clip": "out/scene_02.mp4",
+    "visual_module": "scenes/scene_02.js"
+  },
+  {
+    "id": "scene_03",
+    "line": "Rahat immediately panicked and rushed to fill every bucket at the tube well.",
+    "at": 9.611,
+    "end": 14.126,
+    "duration": 4.515,
+    "audio": "scenes/scene_03.wav",
+    "clip": "out/scene_03.mp4",
+    "visual_module": "scenes/scene_03.js"
+  },
+  {
+    "id": "scene_04",
+    "line": "Why are you sweating like a madman under the afternoon sun?",
+    "at": 14.126,
+    "end": 17.682,
+    "duration": 3.556,
+    "audio": "scenes/scene_04.wav",
+    "clip": "out/scene_04.mp4",
+    "visual_module": "scenes/scene_04.js"
+  },
+  {
+    "id": "scene_05",
+    "line": "Chacha said his joints are aching, and that always means heavy rain!",
+    "at": 17.682,
+    "end": 22.129,
+    "duration": 4.447,
+    "audio": "scenes/scene_05.wav",
+    "clip": "out/scene_05.mp4",
+    "visual_module": "scenes/scene_05.js"
+  },
+  {
+    "id": "scene_06",
+    "line": "Chacha's joints only ache when the tea bill is about to arrive.",
+    "at": 22.129,
+    "end": 25.956,
+    "duration": 3.827,
+    "audio": "scenes/scene_06.wav",
+    "clip": "out/scene_06.mp4",
+    "visual_module": "scenes/scene_06.js"
+  },
+  {
+    "id": "scene_07",
+    "line": "And just like that, the storm never came... and neither did Chacha's money.",
+    "at": 25.956,
+    "end": 31.35,
+    "duration": 5.394,
+    "audio": "scenes/scene_07.wav",
+    "clip": "out/scene_07.mp4",
+    "visual_module": "scenes/scene_07.js"
+  }
+]
