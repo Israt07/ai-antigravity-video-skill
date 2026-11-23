@@ -1,0 +1,90 @@
+{
+  "id": "scene_03",
+  "line_index": 2,
+  "text": "See, twenty thousand giant emus invaded Western Australia's wheat fields,",
+  "caps": "20,000 emus | invaded | wheat fields,",
+  "at": 7.14,
+  "end": 12.8,
+  "duration": 5.66,
+  "audio": "scenes/scene_03.wav",
+  "clip": "out/scene_03.mp4",
+  "words": [
+    {
+      "w": "See,",
+      "line": 2,
+      "s": 7.52,
+      "e": 7.52
+    },
+    {
+      "w": "twenty",
+      "line": 2,
+      "s": 7.48,
+      "e": 7.943
+    },
+    {
+      "w": "thousand",
+      "line": 2,
+      "s": 7.994,
+      "e": 8.611
+    },
+    {
+      "w": "giant",
+      "line": 2,
+      "s": 8.68,
+      "e": 9.02
+    },
+    {
+      "w": "emus",
+      "line": 2,
+      "s": 9.06,
+      "e": 9.58
+    },
+    {
+      "w": "invaded",
+      "line": 2,
+      "s": 9.62,
+      "e": 10.2
+    },
+    {
+      "w": "Western",
+      "line": 2,
+      "s": 10.24,
+      "e": 10.72
+    },
+    {
+      "w": "Australia's",
+      "line": 2,
+      "s": 10.76,
+      "e": 11.54
+    },
+    {
+      "w": "wheat",
+      "line": 2,
+      "s": 11.58,
+      "e": 11.72
+    },
+    {
+      "w": "fields,",
+      "line": 2,
+      "s": 11.76,
+      "e": 12.32
+    }
+  ],
+  "cues": [
+    {
+      "t": 7.16,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 9.06,
+      "type": "gulp",
+      "gain": 0.7
+    },
+    {
+      "t": 11.76,
+      "type": "plop",
+      "gain": 0.6
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "scene_01",
+  "line_index": 0,
+  "text": "In nineteen thirty-two, Australia officially declared war on birds.",
+  "caps": "in 1932, | Australia | declared war | on birds.",
+  "at": 0.0,
+  "end": 4.936,
+  "duration": 4.936,
+  "audio": "scenes/scene_01.wav",
+  "clip": "out/scene_01.mp4",
+  "words": [
+    {
+      "w": "In",
+      "line": 0,
+      "s": 0.3,
+      "e": 0.4
+    },
+    {
+      "w": "nineteen",
+      "line": 0,
+      "s": 0.4,
+      "e": 1.112
+    },
+    {
+      "w": "thirty-two,",
+      "line": 0,
+      "s": 1.191,
+      "e": 1.991
+    },
+    {
+      "w": "Australia",
+      "line": 0,
+      "s": 2.08,
+      "e": 2.5
+    },
+    {
+      "w": "officially",
+      "line": 0,
+      "s": 2.54,
+      "e": 3.02
+    },
+    {
+      "w": "declared",
+      "line": 0,
+      "s": 3.06,
+      "e": 3.52
+    },
+    {
+      "w": "war",
+      "line": 0,
+      "s": 3.56,
+      "e": 3.9
+    },
+    {
+      "w": "on",
+      "line": 0,
+      "s": 3.94,
+      "e": 4.18
+    },
+    {
+      "w": "birds.",
+      "line": 0,
+      "s": 4.22,
+      "e": 4.62
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.05,
+      "type": "whoosh",
+      "gain": 0.6
+    },
+    {
+      "t": 3.56,
+      "type": "ding",
+      "gain": 0.7
+    }
+  ]
+}

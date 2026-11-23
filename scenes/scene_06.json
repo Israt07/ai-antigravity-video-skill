@@ -1,0 +1,90 @@
+{
+  "id": "scene_06",
+  "line_index": 5,
+  "text": "armed with heavy automatic machine guns and ten thousand rounds.",
+  "caps": "heavy | machine guns | and 10,000 | rounds.",
+  "at": 19.84,
+  "end": 24.195,
+  "duration": 4.355,
+  "audio": "scenes/scene_06.wav",
+  "clip": "out/scene_06.mp4",
+  "words": [
+    {
+      "w": "armed",
+      "line": 5,
+      "s": 19.96,
+      "e": 20.2
+    },
+    {
+      "w": "with",
+      "line": 5,
+      "s": 20.24,
+      "e": 20.46
+    },
+    {
+      "w": "heavy",
+      "line": 5,
+      "s": 20.5,
+      "e": 20.76
+    },
+    {
+      "w": "automatic",
+      "line": 5,
+      "s": 20.8,
+      "e": 21.32
+    },
+    {
+      "w": "machine",
+      "line": 5,
+      "s": 21.36,
+      "e": 21.86
+    },
+    {
+      "w": "guns",
+      "line": 5,
+      "s": 21.9,
+      "e": 22.22
+    },
+    {
+      "w": "and",
+      "line": 5,
+      "s": 22.26,
+      "e": 22.8
+    },
+    {
+      "w": "ten",
+      "line": 5,
+      "s": 22.8,
+      "e": 22.967
+    },
+    {
+      "w": "thousand",
+      "line": 5,
+      "s": 22.985,
+      "e": 23.431
+    },
+    {
+      "w": "rounds.",
+      "line": 5,
+      "s": 23.48,
+      "e": 23.86
+    }
+  ],
+  "cues": [
+    {
+      "t": 19.86,
+      "type": "chug",
+      "gain": 0.6
+    },
+    {
+      "t": 21.36,
+      "type": "slam",
+      "gain": 0.7
+    },
+    {
+      "t": 23.48,
+      "type": "pop",
+      "gain": 0.6
+    }
+  ]
+}

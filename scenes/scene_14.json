@@ -1,0 +1,91 @@
+{
+  "id": "scene_14",
+  "line_index": 13,
+  "text": "After a month of chaos, the Australian army withdrew in defeat.",
+  "caps": "",
+  "at": 51.448,
+  "end": 55.598,
+  "duration": 4.15,
+  "audio": "scenes/scene_14.wav",
+  "clip": "out/scene_14.mp4",
+  "words": [
+    {
+      "w": "After",
+      "line": 13,
+      "s": 51.508,
+      "e": 51.68
+    },
+    {
+      "w": "a",
+      "line": 13,
+      "s": 51.72,
+      "e": 51.88
+    },
+    {
+      "w": "month",
+      "line": 13,
+      "s": 51.92,
+      "e": 52.0
+    },
+    {
+      "w": "of",
+      "line": 13,
+      "s": 52.04,
+      "e": 52.18
+    },
+    {
+      "w": "chaos,",
+      "line": 13,
+      "s": 52.22,
+      "e": 52.58
+    },
+    {
+      "w": "the",
+      "line": 13,
+      "s": 53.26,
+      "e": 53.26
+    },
+    {
+      "w": "Australian",
+      "line": 13,
+      "s": 53.3,
+      "e": 53.7
+    },
+    {
+      "w": "army",
+      "line": 13,
+      "s": 53.74,
+      "e": 54.24
+    },
+    {
+      "w": "withdrew",
+      "line": 13,
+      "s": 54.28,
+      "e": 54.78
+    },
+    {
+      "w": "in",
+      "line": 13,
+      "s": 54.82,
+      "e": 55.04
+    },
+    {
+      "w": "defeat.",
+      "line": 13,
+      "s": 55.08,
+      "e": 55.42
+    }
+  ],
+  "cues": [
+    {
+      "t": 51.468,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 55.08,
+      "type": "chirp",
+      "gain": 0.6
+    }
+  ]
+}

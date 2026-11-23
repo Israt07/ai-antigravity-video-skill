@@ -1,0 +1,84 @@
+{
+  "id": "scene_11",
+  "line_index": 10,
+  "text": "ducking behind trees while the army's machine guns jammed.",
+  "caps": "",
+  "at": 38.93,
+  "end": 42.68,
+  "duration": 3.75,
+  "audio": "scenes/scene_11.wav",
+  "clip": "out/scene_11.mp4",
+  "words": [
+    {
+      "w": "ducking",
+      "line": 10,
+      "s": 38.99,
+      "e": 39.24
+    },
+    {
+      "w": "behind",
+      "line": 10,
+      "s": 39.28,
+      "e": 39.68
+    },
+    {
+      "w": "trees",
+      "line": 10,
+      "s": 39.72,
+      "e": 40.22
+    },
+    {
+      "w": "while",
+      "line": 10,
+      "s": 40.26,
+      "e": 40.48
+    },
+    {
+      "w": "the",
+      "line": 10,
+      "s": 40.52,
+      "e": 40.68
+    },
+    {
+      "w": "army's",
+      "line": 10,
+      "s": 40.72,
+      "e": 41.12
+    },
+    {
+      "w": "machine",
+      "line": 10,
+      "s": 41.16,
+      "e": 41.46
+    },
+    {
+      "w": "guns",
+      "line": 10,
+      "s": 41.5,
+      "e": 41.9
+    },
+    {
+      "w": "jammed.",
+      "line": 10,
+      "s": 41.94,
+      "e": 42.36
+    }
+  ],
+  "cues": [
+    {
+      "t": 38.95,
+      "type": "boing",
+      "gain": 0.6
+    },
+    {
+      "t": 41.94,
+      "type": "pop",
+      "gain": 0.7
+    },
+    {
+      "t": 42.04,
+      "type": "tock",
+      "gain": 0.7
+    }
+  ]
+}

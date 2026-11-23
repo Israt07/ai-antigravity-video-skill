@@ -1,0 +1,85 @@
+{
+  "id": "scene_15",
+  "line_index": 14,
+  "text": "Proving that you should never, ever challenge a six-foot bird",
+  "caps": "",
+  "at": 55.598,
+  "end": 59.096,
+  "duration": 3.498,
+  "audio": "scenes/scene_15.wav",
+  "clip": "out/scene_15.mp4",
+  "words": [
+    {
+      "w": "Proving",
+      "line": 14,
+      "s": 55.76,
+      "e": 55.9
+    },
+    {
+      "w": "that",
+      "line": 14,
+      "s": 55.94,
+      "e": 56.22
+    },
+    {
+      "w": "you",
+      "line": 14,
+      "s": 56.26,
+      "e": 56.42
+    },
+    {
+      "w": "should",
+      "line": 14,
+      "s": 56.46,
+      "e": 56.6
+    },
+    {
+      "w": "never,",
+      "line": 14,
+      "s": 56.64,
+      "e": 57.02
+    },
+    {
+      "w": "ever",
+      "line": 14,
+      "s": 57.4,
+      "e": 57.7
+    },
+    {
+      "w": "challenge",
+      "line": 14,
+      "s": 57.74,
+      "e": 58.12
+    },
+    {
+      "w": "a",
+      "line": 14,
+      "s": 58.16,
+      "e": 58.36
+    },
+    {
+      "w": "six-foot",
+      "line": 14,
+      "s": 58.36,
+      "e": 58.828
+    },
+    {
+      "w": "bird",
+      "line": 14,
+      "s": 58.88,
+      "e": 59.156
+    }
+  ],
+  "cues": [
+    {
+      "t": 55.618,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 58.88,
+      "type": "sparkle",
+      "gain": 0.7
+    }
+  ]
+}

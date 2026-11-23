@@ -1,0 +1,90 @@
+{
+  "id": "scene_12",
+  "line_index": 11,
+  "text": "One emu even took several hits, shrugged, and kept running.",
+  "caps": "",
+  "at": 42.68,
+  "end": 46.469,
+  "duration": 3.789,
+  "audio": "scenes/scene_12.wav",
+  "clip": "out/scene_12.mp4",
+  "words": [
+    {
+      "w": "One",
+      "line": 11,
+      "s": 42.78,
+      "e": 42.94
+    },
+    {
+      "w": "emu",
+      "line": 11,
+      "s": 42.98,
+      "e": 43.32
+    },
+    {
+      "w": "even",
+      "line": 11,
+      "s": 43.36,
+      "e": 43.6
+    },
+    {
+      "w": "took",
+      "line": 11,
+      "s": 43.64,
+      "e": 43.84
+    },
+    {
+      "w": "several",
+      "line": 11,
+      "s": 43.88,
+      "e": 44.26
+    },
+    {
+      "w": "hits,",
+      "line": 11,
+      "s": 44.3,
+      "e": 44.68
+    },
+    {
+      "w": "shrugged,",
+      "line": 11,
+      "s": 45.06,
+      "e": 45.34
+    },
+    {
+      "w": "and",
+      "line": 11,
+      "s": 45.38,
+      "e": 45.66
+    },
+    {
+      "w": "kept",
+      "line": 11,
+      "s": 45.7,
+      "e": 45.86
+    },
+    {
+      "w": "running.",
+      "line": 11,
+      "s": 45.9,
+      "e": 46.28
+    }
+  ],
+  "cues": [
+    {
+      "t": 42.7,
+      "type": "whoosh",
+      "gain": 0.5
+    },
+    {
+      "t": 45.06,
+      "type": "boing",
+      "gain": 0.6
+    },
+    {
+      "t": 45.9,
+      "type": "sparkle",
+      "gain": 0.7
+    }
+  ]
+}
