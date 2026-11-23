@@ -98,21 +98,12 @@
                                            "shirt":  "#5D7A94",
                                            "pants":  "#889396",
                                            "expr":  "surprised",
-                                           "anim":  "talk",
+                                           "anim":  "idle",
                                            "x":  460,
                                            "y":  880,
                                            "scale":  2.35
                                        }
                                    ],
-                    "dialogue":  {
-                                     "speakerId":  "rahat",
-                                     "speakerX":  700,
-                                     "speakerY":  1140,
-                                     "text":  "রাহাত সাথে সাথে ঘাবড়ে গেল, আর টিউবওয়েলে বালতি ভরতে ছুটল।",
-                                     "start":  0.2,
-                                     "end":  4.2,
-                                     "fontSize":  34,
-                                     "maxChars":  16
-                                 }
+                    "dialogue":  null
                 }
 }

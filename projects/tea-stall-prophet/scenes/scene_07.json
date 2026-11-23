@@ -120,15 +120,6 @@
                                            "scale":  2.2
                                        }
                                    ],
-                    "dialogue":  {
-                                     "speakerId":  "elder_listener",
-                                     "speakerX":  540,
-                                     "speakerY":  1140,
-                                     "text":  "আর ঠিক তেমনি, ঝড়ও এলো না... চাচার টাকাও না।",
-                                     "start":  0.2,
-                                     "end":  4.8,
-                                     "fontSize":  36,
-                                     "maxChars":  16
-                                 }
+                    "dialogue":  null
                 }
 }
