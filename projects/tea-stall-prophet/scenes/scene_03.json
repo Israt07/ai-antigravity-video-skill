@@ -1,109 +1,91 @@
 {
-    "id":  "scene_03",
-    "line_index":  2,
-    "text":  "Rahat immediately panicked and rushed to fill every bucket at the tube well.",
-    "caps":  "RAHAT *PANICKED | AND RUSHED TO FILL | EVERY *BUCKET!",
-    "at":  9.611,
-    "end":  14.126,
-    "duration":  4.515,
-    "audio":  "scenes/scene_03.wav",
-    "clip":  "out/scene_03.mp4",
-    "words":  [
-                  {
-                      "w":  "Rahat",
-                      "line":  2,
-                      "s":  9.9,
-                      "e":  10.04
-                  },
-                  {
-                      "w":  "immediately",
-                      "line":  2,
-                      "s":  10.08,
-                      "e":  10.58
-                  },
-                  {
-                      "w":  "panicked",
-                      "line":  2,
-                      "s":  10.62,
-                      "e":  11.12
-                  },
-                  {
-                      "w":  "and",
-                      "line":  2,
-                      "s":  11.16,
-                      "e":  11.48
-                  },
-                  {
-                      "w":  "rushed",
-                      "line":  2,
-                      "s":  11.52,
-                      "e":  11.76
-                  },
-                  {
-                      "w":  "to",
-                      "line":  2,
-                      "s":  11.8,
-                      "e":  12.06
-                  },
-                  {
-                      "w":  "fill",
-                      "line":  2,
-                      "s":  12.1,
-                      "e":  12.26
-                  },
-                  {
-                      "w":  "every",
-                      "line":  2,
-                      "s":  12.3,
-                      "e":  12.6
-                  },
-                  {
-                      "w":  "bucket",
-                      "line":  2,
-                      "s":  12.64,
-                      "e":  12.92
-                  },
-                  {
-                      "w":  "at",
-                      "line":  2,
-                      "s":  12.96,
-                      "e":  13.12
-                  },
-                  {
-                      "w":  "the",
-                      "line":  2,
-                      "s":  13.16,
-                      "e":  13.24
-                  },
-                  {
-                      "w":  "tube",
-                      "line":  2,
-                      "s":  13.28,
-                      "e":  13.46
-                  },
-                  {
-                      "w":  "well.",
-                      "line":  2,
-                      "s":  13.5,
-                      "e":  13.76
-                  }
-              ],
-    "visuals":  {
-                    "background":  "house",
-                    "characters":  [
-                                       {
-                                           "id":  "rahat",
-                                           "age":  "adult",
-                                           "outfit":  "shirt",
-                                           "shirt":  "#5D7A94",
-                                           "pants":  "#889396",
-                                           "expr":  "surprised",
-                                           "anim":  "idle",
-                                           "x":  460,
-                                           "y":  880,
-                                           "scale":  2.35
-                                       }
-                                   ],
-                    "dialogue":  null
-                }
+  "id": "scene_03",
+  "line_index": 2,
+  "text": "রাহাত সাথে সাথে ঘাবড়ে গেল, আর টিউবওয়েলে বালতি ভরতে ছুটল।",
+  "caps": "RAHAT *PANICKED | AND RUSHED TO FILL | EVERY *BUCKET!",
+  "at": 9.024,
+  "end": 13.392,
+  "duration": 4.368,
+  "audio": "scenes/scene_03.wav",
+  "clip": "out/scene_03.mp4",
+  "words": [
+    {
+      "w": "রাহাত",
+      "line": 2,
+      "s": 9.024,
+      "e": 9.461
+    },
+    {
+      "w": "সাথে",
+      "line": 2,
+      "s": 9.461,
+      "e": 9.898
+    },
+    {
+      "w": "সাথে",
+      "line": 2,
+      "s": 9.898,
+      "e": 10.334
+    },
+    {
+      "w": "ঘাবড়ে",
+      "line": 2,
+      "s": 10.334,
+      "e": 10.771
+    },
+    {
+      "w": "গেল,",
+      "line": 2,
+      "s": 10.771,
+      "e": 11.208
+    },
+    {
+      "w": "আর",
+      "line": 2,
+      "s": 11.208,
+      "e": 11.645
+    },
+    {
+      "w": "টিউবওয়েলে",
+      "line": 2,
+      "s": 11.645,
+      "e": 12.082
+    },
+    {
+      "w": "বালতি",
+      "line": 2,
+      "s": 12.082,
+      "e": 12.518
+    },
+    {
+      "w": "ভরতে",
+      "line": 2,
+      "s": 12.518,
+      "e": 12.955
+    },
+    {
+      "w": "ছুটল।",
+      "line": 2,
+      "s": 12.955,
+      "e": 13.392
+    }
+  ],
+  "visuals": {
+    "background": "house",
+    "characters": [
+      {
+        "id": "rahat",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#5D7A94",
+        "pants": "#889396",
+        "expr": "surprised",
+        "anim": "idle",
+        "x": 460,
+        "y": 880,
+        "scale": 2.35
+      }
+    ],
+    "dialogue": null
+  }
 }

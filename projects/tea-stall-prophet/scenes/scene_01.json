@@ -1,100 +1,82 @@
 {
-    "id":  "scene_01",
-    "line_index":  0,
-    "text":  "In our village, nobody checks the weather forecast on a smartphone.",
-    "caps":  "IN OUR VILLAGE, | NOBODY *CHECKS | THE *WEATHER FORECAST",
-    "at":  0.0,
-    "end":  4.416,
-    "duration":  4.416,
-    "audio":  "scenes/scene_01.wav",
-    "clip":  "out/scene_01.mp4",
-    "words":  [
-                  {
-                      "w":  "In",
-                      "line":  0,
-                      "s":  0.35,
-                      "e":  0.44
-                  },
-                  {
-                      "w":  "our",
-                      "line":  0,
-                      "s":  0.48,
-                      "e":  0.56
-                  },
-                  {
-                      "w":  "village,",
-                      "line":  0,
-                      "s":  0.6,
-                      "e":  0.96
-                  },
-                  {
-                      "w":  "nobody",
-                      "line":  0,
-                      "s":  1.54,
-                      "e":  1.68
-                  },
-                  {
-                      "w":  "checks",
-                      "line":  0,
-                      "s":  1.72,
-                      "e":  2.12
-                  },
-                  {
-                      "w":  "the",
-                      "line":  0,
-                      "s":  2.16,
-                      "e":  2.34
-                  },
-                  {
-                      "w":  "weather",
-                      "line":  0,
-                      "s":  2.38,
-                      "e":  2.58
-                  },
-                  {
-                      "w":  "forecast",
-                      "line":  0,
-                      "s":  2.62,
-                      "e":  3.06
-                  },
-                  {
-                      "w":  "on",
-                      "line":  0,
-                      "s":  3.1,
-                      "e":  3.3
-                  },
-                  {
-                      "w":  "a",
-                      "line":  0,
-                      "s":  3.34,
-                      "e":  3.46
-                  },
-                  {
-                      "w":  "smartphone.",
-                      "line":  0,
-                      "s":  3.5,
-                      "e":  3.94
-                  }
-              ],
-    "visuals":  {
-                    "background":  "tea-stall",
-                    "characters":  [
-                                       {
-                                           "id":  "tea_chacha",
-                                           "age":  "elder",
-                                           "outfit":  "lungi",
-                                           "shirt":  "#D86B4F",
-                                           "pants":  "#3B5875",
-                                           "mustache":  true,
-                                           "beard":  false,
-                                           "gamchha":  true,
-                                           "expr":  "happy",
-                                           "anim":  "idle",
-                                           "x":  380,
-                                           "y":  890,
-                                           "scale":  2.3
-                                       }
-                                   ],
-                    "dialogue":  null
-                }
+  "id": "scene_01",
+  "line_index": 0,
+  "text": "আমাদের গ্রামে কেউ স্মার্টফোনে আবহাওয়ার পূর্বাভাস দেখে না।",
+  "caps": "IN OUR VILLAGE, | NOBODY *CHECKS | THE *WEATHER FORECAST",
+  "at": 0.0,
+  "end": 3.864,
+  "duration": 3.864,
+  "audio": "scenes/scene_01.wav",
+  "clip": "out/scene_01.mp4",
+  "words": [
+    {
+      "w": "আমাদের",
+      "line": 0,
+      "s": 0.0,
+      "e": 0.483
+    },
+    {
+      "w": "গ্রামে",
+      "line": 0,
+      "s": 0.483,
+      "e": 0.966
+    },
+    {
+      "w": "কেউ",
+      "line": 0,
+      "s": 0.966,
+      "e": 1.449
+    },
+    {
+      "w": "স্মার্টফোনে",
+      "line": 0,
+      "s": 1.449,
+      "e": 1.932
+    },
+    {
+      "w": "আবহাওয়ার",
+      "line": 0,
+      "s": 1.932,
+      "e": 2.415
+    },
+    {
+      "w": "পূর্বাভাস",
+      "line": 0,
+      "s": 2.415,
+      "e": 2.898
+    },
+    {
+      "w": "দেখে",
+      "line": 0,
+      "s": 2.898,
+      "e": 3.381
+    },
+    {
+      "w": "না।",
+      "line": 0,
+      "s": 3.381,
+      "e": 3.864
+    }
+  ],
+  "visuals": {
+    "background": "tea-stall",
+    "characters": [
+      {
+        "id": "tea_chacha",
+        "age": "elder",
+        "outfit": "lungi",
+        "shirt": "#D86B4F",
+        "pants": "#3B5875",
+        "mustache": true,
+        "beard": false,
+        "gamchha": true,
+        "expr": "happy",
+        "anim": "idle",
+        "x": 380,
+        "y": 890,
+        "scale": 2.3
+      }
+    ],
+    "dialogue": null
+  }
 }

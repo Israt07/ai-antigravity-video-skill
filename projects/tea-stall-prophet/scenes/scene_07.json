@@ -1,125 +1,101 @@
 {
-    "id":  "scene_07",
-    "line_index":  6,
-    "text":  "And just like that, the storm never came... and neither did Chacha\u0027s money.",
-    "caps":  "THE STORM *NEVER CAME... | AND NEITHER DID | CHACHA\u0027S *MONEY.",
-    "at":  25.956,
-    "end":  31.35,
-    "duration":  5.394,
-    "audio":  "scenes/scene_07.wav",
-    "clip":  "out/scene_07.mp4",
-    "words":  [
-                  {
-                      "w":  "And",
-                      "line":  6,
-                      "s":  26.016,
-                      "e":  26.12
-                  },
-                  {
-                      "w":  "just",
-                      "line":  6,
-                      "s":  26.16,
-                      "e":  26.34
-                  },
-                  {
-                      "w":  "like",
-                      "line":  6,
-                      "s":  26.38,
-                      "e":  26.56
-                  },
-                  {
-                      "w":  "that,",
-                      "line":  6,
-                      "s":  26.6,
-                      "e":  26.84
-                  },
-                  {
-                      "w":  "the",
-                      "line":  6,
-                      "s":  27.04,
-                      "e":  27.04
-                  },
-                  {
-                      "w":  "storm",
-                      "line":  6,
-                      "s":  27.06,
-                      "e":  27.34
-                  },
-                  {
-                      "w":  "never",
-                      "line":  6,
-                      "s":  27.38,
-                      "e":  27.64
-                  },
-                  {
-                      "w":  "came...",
-                      "line":  6,
-                      "s":  27.68,
-                      "e":  28.1
-                  },
-                  {
-                      "w":  "and",
-                      "line":  6,
-                      "s":  28.72,
-                      "e":  28.76
-                  },
-                  {
-                      "w":  "neither",
-                      "line":  6,
-                      "s":  28.8,
-                      "e":  28.92
-                  },
-                  {
-                      "w":  "did",
-                      "line":  6,
-                      "s":  28.96,
-                      "e":  29.26
-                  },
-                  {
-                      "w":  "Chacha\u0027s",
-                      "line":  6,
-                      "s":  29.3,
-                      "e":  29.88
-                  },
-                  {
-                      "w":  "money.",
-                      "line":  6,
-                      "s":  29.92,
-                      "e":  30.06
-                  }
-              ],
-    "visuals":  {
-                    "background":  "tea-stall",
-                    "characters":  [
-                                       {
-                                           "id":  "elder_listener",
-                                           "age":  "elder",
-                                           "outfit":  "fatua",
-                                           "shirt":  "#E5DAC0",
-                                           "pants":  "#46604D",
-                                           "hat":  "topi",
-                                           "beard":  true,
-                                           "expr":  "surprised",
-                                           "anim":  "idle",
-                                           "x":  320,
-                                           "y":  890,
-                                           "scale":  2.25
-                                       },
-                                       {
-                                           "id":  "tea_chacha",
-                                           "age":  "elder",
-                                           "outfit":  "lungi",
-                                           "shirt":  "#D86B4F",
-                                           "pants":  "#3B5875",
-                                           "mustache":  true,
-                                           "gamchha":  true,
-                                           "expr":  "happy",
-                                           "anim":  "walk",
-                                           "x":  750,
-                                           "y":  890,
-                                           "scale":  2.2
-                                       }
-                                   ],
-                    "dialogue":  null
-                }
+  "id": "scene_07",
+  "line_index": 6,
+  "text": "আর ঠিক তেমনি, ঝড়ও এলো না... চাচার টাকাও না。",
+  "caps": "THE STORM *NEVER CAME... | AND NEITHER DID | CHACHA'S *MONEY.",
+  "at": 24.432,
+  "end": 28.848,
+  "duration": 4.416,
+  "audio": "scenes/scene_07.wav",
+  "clip": "out/scene_07.mp4",
+  "words": [
+    {
+      "w": "আর",
+      "line": 6,
+      "s": 24.432,
+      "e": 24.923
+    },
+    {
+      "w": "ঠিক",
+      "line": 6,
+      "s": 24.923,
+      "e": 25.413
+    },
+    {
+      "w": "তেমনি,",
+      "line": 6,
+      "s": 25.413,
+      "e": 25.904
+    },
+    {
+      "w": "ঝড়ও",
+      "line": 6,
+      "s": 25.904,
+      "e": 26.395
+    },
+    {
+      "w": "এলো",
+      "line": 6,
+      "s": 26.395,
+      "e": 26.885
+    },
+    {
+      "w": "না...",
+      "line": 6,
+      "s": 26.885,
+      "e": 27.376
+    },
+    {
+      "w": "চাচার",
+      "line": 6,
+      "s": 27.376,
+      "e": 27.867
+    },
+    {
+      "w": "টাকাও",
+      "line": 6,
+      "s": 27.867,
+      "e": 28.357
+    },
+    {
+      "w": "না。",
+      "line": 6,
+      "s": 28.357,
+      "e": 28.848
+    }
+  ],
+  "visuals": {
+    "background": "tea-stall",
+    "characters": [
+      {
+        "id": "elder_listener",
+        "age": "elder",
+        "outfit": "fatua",
+        "shirt": "#E5DAC0",
+        "pants": "#46604D",
+        "hat": "topi",
+        "beard": true,
+        "expr": "surprised",
+        "anim": "idle",
+        "x": 320,
+        "y": 890,
+        "scale": 2.25
+      },
+      {
+        "id": "tea_chacha",
+        "age": "elder",
+        "outfit": "lungi",
+        "shirt": "#D86B4F",
+        "pants": "#3B5875",
+        "mustache": true,
+        "gamchha": true,
+        "expr": "happy",
+        "anim": "walk",
+        "x": 750,
+        "y": 890,
+        "scale": 2.2
+      }
+    ],
+    "dialogue": null
+  }
 }

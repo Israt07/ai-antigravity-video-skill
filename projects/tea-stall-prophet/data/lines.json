@@ -1,49 +1,49 @@
 {
- "duration": 31.35,
- "voice": "am_michael",
- "speed": 1.05,
- "lines": [
-  {
-   "i": 0,
-   "text": "In our village, nobody checks the weather forecast on a smartphone.",
-   "start": 0.35,
-   "end": 4.126
-  },
-  {
-   "i": 1,
-   "text": "Look at that crow flying sideways! In five minutes, a massive storm is coming!",
-   "start": 4.476,
-   "end": 9.321
-  },
-  {
-   "i": 2,
-   "text": "Rahat immediately panicked and rushed to fill every bucket at the tube well.",
-   "start": 9.671,
-   "end": 13.836
-  },
-  {
-   "i": 3,
-   "text": "Why are you sweating like a madman under the afternoon sun?",
-   "start": 14.186,
-   "end": 17.392
-  },
-  {
-   "i": 4,
-   "text": "Chacha said his joints are aching, and that always means heavy rain!",
-   "start": 17.742,
-   "end": 21.839
-  },
-  {
-   "i": 5,
-   "text": "Chacha's joints only ache when the tea bill is about to arrive.",
-   "start": 22.189,
-   "end": 25.666
-  },
-  {
-   "i": 6,
-   "text": "And just like that, the storm never came... and neither did Chacha's money.",
-   "start": 26.016,
-   "end": 30.2
-  }
- ]
+  "duration": 28.848,
+  "voice": "bn-BD-PradeepNeural",
+  "speed": 1.05,
+  "lines": [
+    {
+      "i": 0,
+      "text": "আমাদের গ্রামে কেউ স্মার্টফোনে আবহাওয়ার পূর্বাভাস দেখে না।",
+      "start": 0.0,
+      "end": 3.864
+    },
+    {
+      "i": 1,
+      "text": "দেখো ওই কাকটা তেরছা উড়ছে! পাঁচ মিনিটে ভয়ানক ঝড় আসছে!",
+      "start": 3.864,
+      "end": 9.024
+    },
+    {
+      "i": 2,
+      "text": "রাহাত সাথে সাথে ঘাবড়ে গেল, আর টিউবওয়েলে বালতি ভরতে ছুটল।",
+      "start": 9.024,
+      "end": 13.392
+    },
+    {
+      "i": 3,
+      "text": "তুই এই দুপুরের রোদে পাগলের মতো ঘামছিস কেন?",
+      "start": 13.392,
+      "end": 16.776
+    },
+    {
+      "i": 4,
+      "text": "চাচা বলল তার গিঁটে ব্যথা হচ্ছে, মানে ভারী বৃষ্টি আসছে!",
+      "start": 16.776,
+      "end": 20.736
+    },
+    {
+      "i": 5,
+      "text": "চাচার গিঁটে ব্যথা তখনই হয় যখন চায়ের বিল আসতে যায়।",
+      "start": 20.736,
+      "end": 24.432
+    },
+    {
+      "i": 6,
+      "text": "আর ঠিক তেমনি, ঝড়ও এলো না... চাচার টাকাও না。",
+      "start": 24.432,
+      "end": 28.848
+    }
+  ]
 }

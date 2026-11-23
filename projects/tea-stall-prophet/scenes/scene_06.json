@@ -1,115 +1,103 @@
 {
-    "id":  "scene_06",
-    "line_index":  5,
-    "text":  "Chacha\u0027s joints only ache when the tea bill is about to arrive.",
-    "caps":  "HIS JOINTS ONLY *ACHE | WHEN THE *TEA BILL | IS ABOUT TO *ARRIVE.",
-    "at":  22.129,
-    "end":  25.956,
-    "duration":  3.827,
-    "audio":  "scenes/scene_06.wav",
-    "clip":  "out/scene_06.mp4",
-    "words":  [
-                  {
-                      "w":  "Chacha\u0027s",
-                      "line":  5,
-                      "s":  22.42,
-                      "e":  22.7
-                  },
-                  {
-                      "w":  "joints",
-                      "line":  5,
-                      "s":  22.74,
-                      "e":  23.0
-                  },
-                  {
-                      "w":  "only",
-                      "line":  5,
-                      "s":  23.04,
-                      "e":  23.4
-                  },
-                  {
-                      "w":  "ache",
-                      "line":  5,
-                      "s":  23.44,
-                      "e":  23.84
-                  },
-                  {
-                      "w":  "when",
-                      "line":  5,
-                      "s":  23.88,
-                      "e":  24.04
-                  },
-                  {
-                      "w":  "the",
-                      "line":  5,
-                      "s":  24.08,
-                      "e":  24.18
-                  },
-                  {
-                      "w":  "tea",
-                      "line":  5,
-                      "s":  24.22,
-                      "e":  24.4
-                  },
-                  {
-                      "w":  "bill",
-                      "line":  5,
-                      "s":  24.44,
-                      "e":  24.64
-                  },
-                  {
-                      "w":  "is",
-                      "line":  5,
-                      "s":  24.68,
-                      "e":  24.8
-                  },
-                  {
-                      "w":  "about",
-                      "line":  5,
-                      "s":  24.84,
-                      "e":  25.04
-                  },
-                  {
-                      "w":  "to",
-                      "line":  5,
-                      "s":  25.08,
-                      "e":  25.22
-                  },
-                  {
-                      "w":  "arrive.",
-                      "line":  5,
-                      "s":  25.26,
-                      "e":  25.6
-                  }
-              ],
-    "visuals":  {
-                    "background":  "indoor-bench",
-                    "characters":  [
-                                       {
-                                           "id":  "dadi",
-                                           "age":  "elder",
-                                           "outfit":  "saree",
-                                           "hat":  "pallu",
-                                           "shirt":  "#F7F4EC",
-                                           "pants":  "#9A4141",
-                                           "glasses":  true,
-                                           "baby":  true,
-                                           "expr":  "happy",
-                                           "anim":  "talk-still",
-                                           "x":  320,
-                                           "y":  880,
-                                           "scale":  2.4
-                                       }
-                                   ],
-                    "dialogue":  {
-                                     "speakerId":  "dadi",
-                                     "speakerX":  550,
-                                     "speakerY":  1130,
-                                     "text":  "চাচার গিঁটে ব্যথা তখনই হয় যখন চায়ের বিল আসতে যায়।",
-                                     "start":  0.15,
-                                     "end":  3.5,
-                                     "fontSize":  36,
-                                     "maxChars":  16
-                                 }
-                }
+  "id": "scene_06",
+  "line_index": 5,
+  "text": "চাচার গিঁটে ব্যথা তখনই হয় যখন চায়ের বিল আসতে যায়।",
+  "caps": "HIS JOINTS ONLY *ACHE | WHEN THE *TEA BILL | IS ABOUT TO *ARRIVE.",
+  "at": 20.736,
+  "end": 24.432,
+  "duration": 3.696,
+  "audio": "scenes/scene_06.wav",
+  "clip": "out/scene_06.mp4",
+  "words": [
+    {
+      "w": "চাচার",
+      "line": 5,
+      "s": 20.736,
+      "e": 21.106
+    },
+    {
+      "w": "গিঁটে",
+      "line": 5,
+      "s": 21.106,
+      "e": 21.475
+    },
+    {
+      "w": "ব্যথা",
+      "line": 5,
+      "s": 21.475,
+      "e": 21.845
+    },
+    {
+      "w": "তখনই",
+      "line": 5,
+      "s": 21.845,
+      "e": 22.214
+    },
+    {
+      "w": "হয়",
+      "line": 5,
+      "s": 22.214,
+      "e": 22.584
+    },
+    {
+      "w": "যখন",
+      "line": 5,
+      "s": 22.584,
+      "e": 22.954
+    },
+    {
+      "w": "চায়ের",
+      "line": 5,
+      "s": 22.954,
+      "e": 23.323
+    },
+    {
+      "w": "বিল",
+      "line": 5,
+      "s": 23.323,
+      "e": 23.693
+    },
+    {
+      "w": "আসতে",
+      "line": 5,
+      "s": 23.693,
+      "e": 24.062
+    },
+    {
+      "w": "যায়।",
+      "line": 5,
+      "s": 24.062,
+      "e": 24.432
+    }
+  ],
+  "visuals": {
+    "background": "indoor-bench",
+    "characters": [
+      {
+        "id": "dadi",
+        "age": "elder",
+        "outfit": "saree",
+        "hat": "pallu",
+        "shirt": "#F7F4EC",
+        "pants": "#9A4141",
+        "glasses": true,
+        "baby": true,
+        "expr": "happy",
+        "anim": "talk-still",
+        "x": 320,
+        "y": 880,
+        "scale": 2.4
+      }
+    ],
+    "dialogue": {
+      "speakerId": "dadi",
+      "speakerX": 550,
+      "speakerY": 1130,
+      "text": "চাচার গিঁটে ব্যথা তখনই হয় যখন চায়ের বিল আসতে যায়।",
+      "start": 0.15,
+      "end": 3.45,
+      "fontSize": 36,
+      "maxChars": 16
+    }
+  }
 }

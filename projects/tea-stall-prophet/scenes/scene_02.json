@@ -1,140 +1,116 @@
 {
-    "id":  "scene_02",
-    "line_index":  1,
-    "text":  "Look at that crow flying sideways! In five minutes, a massive storm is coming!",
-    "caps":  "LOOK AT THAT CROW! | IN FIVE *MINUTES, | MASSIVE *STORM COMING!",
-    "at":  4.416,
-    "end":  9.611,
-    "duration":  5.195,
-    "audio":  "scenes/scene_02.wav",
-    "clip":  "out/scene_02.mp4",
-    "words":  [
-                  {
-                      "w":  "Look",
-                      "line":  1,
-                      "s":  4.58,
-                      "e":  4.6
-                  },
-                  {
-                      "w":  "at",
-                      "line":  1,
-                      "s":  4.64,
-                      "e":  4.74
-                  },
-                  {
-                      "w":  "that",
-                      "line":  1,
-                      "s":  4.78,
-                      "e":  4.94
-                  },
-                  {
-                      "w":  "crow",
-                      "line":  1,
-                      "s":  4.98,
-                      "e":  5.24
-                  },
-                  {
-                      "w":  "flying",
-                      "line":  1,
-                      "s":  5.28,
-                      "e":  5.72
-                  },
-                  {
-                      "w":  "sideways!",
-                      "line":  1,
-                      "s":  5.76,
-                      "e":  6.24
-                  },
-                  {
-                      "w":  "In",
-                      "line":  1,
-                      "s":  6.94,
-                      "e":  7.02
-                  },
-                  {
-                      "w":  "five",
-                      "line":  1,
-                      "s":  7.06,
-                      "e":  7.32
-                  },
-                  {
-                      "w":  "minutes,",
-                      "line":  1,
-                      "s":  7.36,
-                      "e":  7.68
-                  },
-                  {
-                      "w":  "a",
-                      "line":  1,
-                      "s":  7.88,
-                      "e":  7.94
-                  },
-                  {
-                      "w":  "massive",
-                      "line":  1,
-                      "s":  7.98,
-                      "e":  8.3
-                  },
-                  {
-                      "w":  "storm",
-                      "line":  1,
-                      "s":  8.34,
-                      "e":  8.74
-                  },
-                  {
-                      "w":  "is",
-                      "line":  1,
-                      "s":  8.78,
-                      "e":  8.94
-                  },
-                  {
-                      "w":  "coming!",
-                      "line":  1,
-                      "s":  8.98,
-                      "e":  9.3
-                  }
-              ],
-    "visuals":  {
-                    "background":  "tea-stall",
-                    "characters":  [
-                                       {
-                                           "id":  "tea_chacha",
-                                           "age":  "elder",
-                                           "outfit":  "lungi",
-                                           "shirt":  "#D86B4F",
-                                           "pants":  "#3B5875",
-                                           "mustache":  true,
-                                           "gamchha":  true,
-                                           "expr":  "surprised",
-                                           "anim":  "talk",
-                                           "x":  240,
-                                           "y":  890,
-                                           "scale":  2.3
-                                       },
-                                       {
-                                           "id":  "elder_listener",
-                                           "age":  "elder",
-                                           "outfit":  "fatua",
-                                           "shirt":  "#E5DAC0",
-                                           "pants":  "#46604D",
-                                           "hat":  "topi",
-                                           "beard":  true,
-                                           "expr":  "neutral",
-                                           "anim":  "idle",
-                                           "x":  580,
-                                           "y":  890,
-                                           "scale":  2.25
-                                       }
-                                   ],
-                    "dialogue":  {
-                                     "speakerId":  "tea_chacha",
-                                     "speakerX":  460,
-                                     "speakerY":  1140,
-                                     "text":  "দেখো ওই কাকটা তেরছা উড়ছে! পাঁচ মিনিটে ভয়ানক ঝড় আসছে!",
-                                     "start":  0.15,
-                                     "end":  4.9,
-                                     "fontSize":  34,
-                                     "maxChars":  16
-                                 }
-                }
+  "id": "scene_02",
+  "line_index": 1,
+  "text": "দেখো ওই কাকটা তেরছা উড়ছে! পাঁচ মিনিটে ভয়ানক ঝড় আসছে!",
+  "caps": "LOOK AT THAT CROW! | IN FIVE *MINUTES, | MASSIVE *STORM COMING!",
+  "at": 3.864,
+  "end": 9.024,
+  "duration": 5.16,
+  "audio": "scenes/scene_02.wav",
+  "clip": "out/scene_02.mp4",
+  "words": [
+    {
+      "w": "দেখো",
+      "line": 1,
+      "s": 3.864,
+      "e": 4.38
+    },
+    {
+      "w": "ওই",
+      "line": 1,
+      "s": 4.38,
+      "e": 4.896
+    },
+    {
+      "w": "কাকটা",
+      "line": 1,
+      "s": 4.896,
+      "e": 5.412
+    },
+    {
+      "w": "তেরছা",
+      "line": 1,
+      "s": 5.412,
+      "e": 5.928
+    },
+    {
+      "w": "উড়ছে!",
+      "line": 1,
+      "s": 5.928,
+      "e": 6.444
+    },
+    {
+      "w": "পাঁচ",
+      "line": 1,
+      "s": 6.444,
+      "e": 6.96
+    },
+    {
+      "w": "মিনিটে",
+      "line": 1,
+      "s": 6.96,
+      "e": 7.476
+    },
+    {
+      "w": "ভয়ানক",
+      "line": 1,
+      "s": 7.476,
+      "e": 7.992
+    },
+    {
+      "w": "ঝড়",
+      "line": 1,
+      "s": 7.992,
+      "e": 8.508
+    },
+    {
+      "w": "আসছে!",
+      "line": 1,
+      "s": 8.508,
+      "e": 9.024
+    }
+  ],
+  "visuals": {
+    "background": "tea-stall",
+    "characters": [
+      {
+        "id": "tea_chacha",
+        "age": "elder",
+        "outfit": "lungi",
+        "shirt": "#D86B4F",
+        "pants": "#3B5875",
+        "mustache": true,
+        "gamchha": true,
+        "expr": "surprised",
+        "anim": "talk",
+        "x": 240,
+        "y": 890,
+        "scale": 2.3
+      },
+      {
+        "id": "elder_listener",
+        "age": "elder",
+        "outfit": "fatua",
+        "shirt": "#E5DAC0",
+        "pants": "#46604D",
+        "hat": "topi",
+        "beard": true,
+        "expr": "neutral",
+        "anim": "idle",
+        "x": 580,
+        "y": 890,
+        "scale": 2.25
+      }
+    ],
+    "dialogue": {
+      "speakerId": "tea_chacha",
+      "speakerX": 460,
+      "speakerY": 1140,
+      "text": "দেখো ওই কাকটা তেরছা উড়ছে! পাঁচ মিনিটে ভয়ানক ঝড় আসছে!",
+      "start": 0.15,
+      "end": 4.91,
+      "fontSize": 34,
+      "maxChars": 16
+    }
+  }
 }
