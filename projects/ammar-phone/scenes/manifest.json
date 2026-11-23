@@ -2,31 +2,31 @@
   {
     "id": "scene_01",
     "clip": "out/scene_01.mp4",
-    "duration": 8.928
+    "duration": 12.91
   },
   {
     "id": "scene_02",
     "clip": "out/scene_02.mp4",
-    "duration": 9.552
+    "duration": 17.05
   },
   {
     "id": "scene_03",
     "clip": "out/scene_03.mp4",
-    "duration": 6.984
+    "duration": 10.72
   },
   {
     "id": "scene_04",
     "clip": "out/scene_04.mp4",
-    "duration": 12.576
+    "duration": 8.21
   },
   {
     "id": "scene_05",
     "clip": "out/scene_05.mp4",
-    "duration": 3.888
+    "duration": 1.91
   },
   {
     "id": "scene_06",
     "clip": "out/scene_06.mp4",
-    "duration": 8.904
+    "duration": 8.93
   }
 ]
