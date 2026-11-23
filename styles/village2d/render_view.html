@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Village 2D Render View</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #FAF5EB;
+  }
+  #cv {
+    display: block;
+    width: 1080px;
+    height: 1920px;
+  }
+  #svg_container {
+    display: none;
+  }
+  .ol path, .ol rect, .ol ellipse, .ol circle, .ol polygon {
+    stroke: #2B1B1B;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+  }
+  .ol .eye ellipse {
+    stroke-width: 1.5;
+  }
+  .nl {
+    stroke: none !important;
+  }
+</style>
+</head>
+<body>
+<div id="svg_container"></div>
+<canvas id="cv" width="1080" height="1920"></canvas>
+
+<script type="module">
+import { buildSceneSVG, animate } from './renderer.js';
+import { testScene } from './test_scene.js';
+
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const container = document.getElementById('svg_container');
+
+const scene = testScene;
+const dur = scene.duration || 3.5;
+
+// Render initial SVG into container
+container.innerHTML = buildSceneSVG({
+  background: scene.background,
+  characters: scene.characters,
+  dialogue: scene.dialogue,
+  t: 0,
+  duration: dur
+});
+
+const OP = (window.OP = {
+  ready: false,
+  duration: () => dur,
+  draw: (t) => {
+    // Re-render SVG markup for time t (bubble appearance, cross-dissolve fade)
+    container.innerHTML = buildSceneSVG({
+      background: scene.background,
+      characters: scene.characters,
+      dialogue: scene.dialogue,
+      t: t,
+      duration: dur
+    });
+
+    // Run procedural joint/facial animation for each character
+    const stage = document.getElementById('stage');
+    for (const c of scene.characters) {
+      animate(c.id, t, c.anim || 'idle', stage);
+    }
+
+    // Rasterize SVG onto canvas
+    const svgStr = new XMLSerializer().serializeToString(stage);
+    const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        ctx.clearRect(0, 0, 1080, 1920);
+        ctx.drawImage(img, 0, 0);
+        URL.revokeObjectURL(url);
+        resolve(cv.toDataURL('image/jpeg', 0.95));
+      };
+      img.src = url;
+    });
+  },
+  frame: async (t, q = 0.92) => {
+    return await OP.draw(t);
+  }
+});
+
+// Signal ready
+document.fonts.ready.then(() => {
+  OP.ready = true;
+});
+</script>
+</body>
+</html>
