@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Village 2D Style Sheet</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body {
+    width: 1920px;
+    height: 1080px;
+    background: #191614;
+    color: #F4EFE6;
+    overflow: hidden;
+    padding: 30px 40px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #382F28;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #EAD8B7;
+  }
+  .tagline {
+    font-size: 13px;
+    color: #A89886;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 480px 800px 520px;
+    gap: 20px;
+    height: 960px;
+  }
+  .card {
+    background: #231E1A;
+    border: 1px solid #3E332B;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head {
+    padding: 10px 16px;
+    background: #2D2520;
+    border-bottom: 1px solid #3E332B;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #D6A868;
+    text-transform: uppercase;
+  }
+  .hero-card {
+    grid-row: span 2;
+  }
+  .hero-view {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #FAF5EB;
+  }
+  .hero-view svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cast-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    padding: 16px 8px;
+    background: #FAF5EB;
+  }
+  .cast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+  }
+  .cast-item svg {
+    width: 160px;
+    height: 310px;
+  }
+  .cast-name {
+    margin-top: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #3B2A20;
+    text-transform: uppercase;
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+  .swatch {
+    border-radius: 8px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.15);
+  }
+  .swatch span {
+    font-size: 9px;
+    opacity: 0.9;
+  }
+  .rules-content {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #D8CCC0;
+  }
+  .rules-content li {
+    margin-left: 18px;
+    margin-bottom: 6px;
+  }
+  .rules-content b {
+    color: #F0D49C;
+  }
+  .bg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+  .bg-card {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 160px;
+    position: relative;
+    border: 1px solid #4A3E34;
+    background: #FAF5EB;
+  }
+  .bg-card svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bg-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(27,20,16,0.85);
+    color: #E8D6B5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    text-align: center;
+  }
+  .ol path, .ol rect, .ol ellipse, .ol circle, .ol polygon {
+    stroke: #2B1B1B;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+  }
+  .nl {
+    stroke: none !important;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>VILLAGE 2D: VIDEO STYLE SHEET</h1>
+  </div>
+  <div class="tagline">
+    Flat 2D Rural Bangladesh · Warm Muted Palette · Speech Bubble Dialogue · Per-Scene Pipeline
+  </div>
+</header>
+
+<div class="grid">
+  <!-- 1. Hero Frame -->
+  <div class="card hero-card">
+    <div class="card-head">1 · Hero Frame (9:16 Vertical)</div>
+    <div id="hero_container" class="hero-view"></div>
+  </div>
+
+  <!-- 2. The Cast & Palette -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+    <div class="card" style="height: 480px;">
+      <div class="card-head">2 · The Cast (Flat Chibi 2D Vectors)</div>
+      <div id="cast_container" class="cast-content"></div>
+    </div>
+    <div class="card" style="height: 440px;">
+      <div class="card-head">3 · Warm Muted Palette</div>
+      <div class="palette-grid">
+        <div class="swatch" style="background:#D9C7A1; color:#2B1B1B;">Sand Ground<span>#D9C7A1</span></div>
+        <div class="swatch" style="background:#BA6E4C;">Terracotta Wall<span>#BA6E4C</span></div>
+        <div class="swatch" style="background:#284433;">Tin Roof Forest<span>#284433</span></div>
+        <div class="swatch" style="background:#5D7A94;">Dusty Blue Shirt<span>#5D7A94</span></div>
+        <div class="swatch" style="background:#3B5875;">Muted Lungi Slate<span>#3B5875</span></div>
+        <div class="swatch" style="background:#C4985B;">Earthy Mustard<span>#C4985B</span></div>
+        <div class="swatch" style="background:#9A4141;">Madder Saree Border<span>#9A4141</span></div>
+        <div class="swatch" style="background:#F7F4EC; color:#2B1B1B;">Soft Pallu White<span>#F7F4EC</span></div>
+      </div>
+      <div style="padding: 0 16px 16px 16px; font-size: 11px; color:#A89886; line-height:1.4;">
+        <b>Design Rules:</b> One flat skin tone with thin dark brown outline (#2B1B1B). No cheek blush or gradients. Big rounder heads (130% body ratio), simple oval eyes with small black pupils, tiny curved nose, procedural mouth flap and blinking.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Backgrounds & Rules -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+    <div class="card" style="height: 480px;">
+      <div class="card-head">4 · Handcrafted Backgrounds</div>
+      <div id="bg_container" class="bg-grid"></div>
+    </div>
+    <div class="card" style="height: 440px;">
+      <div class="card-head">5 · Production & Pipeline Rules</div>
+      <ul class="rules-content">
+        <li><b>Line = Scene:</b> Every script line is a self-contained scene with its own cached audio, visual code, and rendered clip.</li>
+        <li><b>Dialogue Bubbles:</b> Crisp white rounded speech bubbles with bold dark text and a tail pointing to the current speaker.</li>
+        <li><b>Filmic Grain & Vignette:</b> Subtle 3.5% organic film grain and 25% warm lens vignette framing the daylight scene.</li>
+        <li><b>Seamless Concat:</b> The final video is an exact concatenation of per-scene clips (`out/scene_01.mp4` … `out/scene_XX.mp4`).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { buildSceneSVG, renderCharacter } from './renderer.js';
+import { testScene } from './test_scene.js';
+import { getBackground } from './backgrounds/index.js';
+
+// 1. Render Hero Scene
+const heroContainer = document.getElementById('hero_container');
+heroContainer.innerHTML = buildSceneSVG({
+  background: testScene.background,
+  characters: testScene.characters,
+  dialogue: testScene.dialogue,
+  t: 1.5,
+  duration: 3.5
+});
+
+// 2. Render Cast
+const castContainer = document.getElementById('cast_container');
+const castMembers = [
+  {
+    name: 'Tea Chacha',
+    spec: { id: 'c1', age: 'elder', outfit: 'lungi', shirt: '#D86B4F', pants: '#3B5875', mustache: true, gamchha: true, expr: 'happy', x: 0, y: 0, scale: 1 }
+  },
+  {
+    name: 'Young Man',
+    spec: { id: 'c2', age: 'adult', outfit: 'shirt', shirt: '#5D7A94', pants: '#889396', hair: '#241B17', style: 'short', expr: 'happy', x: 0, y: 0, scale: 1 }
+  },
+  {
+    name: 'Dadi & Baby',
+    spec: { id: 'c3', age: 'elder', outfit: 'saree', hat: 'pallu', shirt: '#F7F4EC', pants: '#9A4141', blouse: '#C4985B', glasses: true, baby: true, expr: 'happy', x: 0, y: 0, scale: 1 }
+  },
+  {
+    name: 'Village Elder',
+    spec: { id: 'c4', age: 'elder', outfit: 'fatua', shirt: '#E5DAC0', pants: '#46604D', hat: 'topi', beard: true, expr: 'neutral', x: 0, y: 0, scale: 1 }
+  }
+];
+
+castContainer.innerHTML = castMembers.map(m => `
+  <div class="cast-item">
+    <svg viewBox="70 50 260 430" width="160" height="310">
+      ${renderCharacter(m.spec, m.spec.id)}
+    </svg>
+    <div class="cast-name">${m.name}</div>
+  </div>
+`).join('');
+
+// 3. Render Background Thumbnails
+const bgContainer = document.getElementById('bg_container');
+const bgs = [
+  { key: 'tea-stall', label: 'Roadside Tea Stall' },
+  { key: 'house', label: 'House & Hand Pump' },
+  { key: 'mosque-field', label: 'Mosque & Paddy Field' },
+  { key: 'indoor-bench', label: 'Indoor Chowki Bench' }
+];
+
+bgContainer.innerHTML = bgs.map(b => {
+  const bgFn = getBackground(b.key);
+  return `
+    <div class="bg-card">
+      <svg viewBox="0 0 1080 1920">
+        ${bgFn()}
+      </svg>
+      <div class="bg-label">${b.label}</div>
+    </div>
+  `;
+}).join('');
+
+window.SHEET_READY = true;
+</script>
+</body>
+</html>
