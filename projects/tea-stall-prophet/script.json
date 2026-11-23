@@ -1,7 +1,7 @@
 {
   "title": "The Tea Stall Weather Prophet",
   "style": "village2d",
-  "voice": "bn-BD-PradeepNeural",
+  "voice": "cloned:female-voice",
   "speed": 1.05,
   "lead": 0.35,
   "outro": 0.8,
