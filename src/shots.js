@@ -12,8 +12,12 @@ import {
   person
 } from '../scenes/common.js';
 import { allScenes } from '../scenes/index.js';
+import { buildVillage2dShots } from './village2d/shots_adapter.js';
 
-export function buildShots(E) {
+export function buildShots(E, script = {}) {
+  if (script && script.style === 'village2d') {
+    return buildVillage2dShots(script);
+  }
   const S = [], CUES = [], add = (o) => (S.push(o), o), cue = (t, type, o = {}) => CUES.push({ t: +t.toFixed(3), type, ...o });
   const cut = (i) => (i === 0 ? 0 : L(i) - 0.06);
   const cam = camera(36);
