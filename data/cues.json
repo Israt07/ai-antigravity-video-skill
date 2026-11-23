@@ -1,0 +1,210 @@
+{
+ "duration": 57.143,
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 1.64,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 2.42,
+   "type": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 4.94,
+   "type": "boing",
+   "gain": 0.6
+  },
+  {
+   "t": 6.22,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 8.78,
+   "type": "tock",
+   "gain": 0.7
+  },
+  {
+   "t": 9.96,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 13.96,
+   "type": "sparkle",
+   "gain": 0.6
+  },
+  {
+   "t": 14.575,
+   "type": "ding",
+   "gain": 0.6
+  },
+  {
+   "t": 16.84,
+   "type": "pop",
+   "gain": 0.7
+  },
+  {
+   "t": 17.745,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 18.8,
+   "type": "ding",
+   "gain": 0.7
+  },
+  {
+   "t": 20.164,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 22.4,
+   "type": "thud",
+   "gain": 0.8
+  },
+  {
+   "t": 23.687,
+   "type": "boing",
+   "gain": 0.6
+  },
+  {
+   "t": 24.52,
+   "type": "ding",
+   "gain": 0.7
+  },
+  {
+   "t": 25.087,
+   "type": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 27.76,
+   "type": "slide",
+   "gain": 0.6
+  },
+  {
+   "t": 29.507,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 31.14,
+   "type": "ding",
+   "gain": 0.8
+  },
+  {
+   "t": 31.29,
+   "type": "sparkle",
+   "gain": 0.6
+  },
+  {
+   "t": 32.334,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 33.32,
+   "type": "boing",
+   "gain": 0.6
+  },
+  {
+   "t": 34.295,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 36.5,
+   "type": "plop",
+   "gain": 0.7
+  },
+  {
+   "t": 37.66,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 38.195,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 39.68,
+   "type": "chirp",
+   "gain": 0.6
+  },
+  {
+   "t": 41.103,
+   "type": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 41.54,
+   "type": "sparkle",
+   "gain": 0.7
+  },
+  {
+   "t": 42.796,
+   "type": "slide",
+   "gain": 0.6
+  },
+  {
+   "t": 44.24,
+   "type": "slam",
+   "gain": 0.8
+  },
+  {
+   "t": 45.256,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 46.74,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 47.56,
+   "type": "boing",
+   "gain": 0.6
+  },
+  {
+   "t": 49.58,
+   "type": "sparkle",
+   "gain": 0.7
+  },
+  {
+   "t": 50.153,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 51.62,
+   "type": "ding",
+   "gain": 0.7
+  },
+  {
+   "t": 52.413,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 54.54,
+   "type": "sparkle",
+   "gain": 0.7
+  },
+  {
+   "t": 55.2,
+   "type": "stamp",
+   "gain": 0.8
+  }
+ ]
+}
