@@ -35,7 +35,7 @@ contact sheet and clip it names and look at them.
 ## 1. Intake (ONE message, defaults filled in)
 Ask only what's unknown, all at once: topic (or "you pick 3 ideas"), a link to a short whose format they like (optional),
 length (default ~30 s), voice (`SKILL/scripts/py SKILL/scripts/voice.py --list`; default `am_michael`), voiceover mode:
-**AI voice** (default) · **their own recording** (they record after seeing the script; `words.py --audio`) ·
+**AI voice** (default) · **voice cloning** (clone ANY voice from a 10-30s sample via `clone_voice.py`) · **their own recording** (they record after seeing the script; `words.py --audio`) ·
 **captions-only** (no voice yet; `estimate.py`), music (built-in bed · none · their own royalty-free file), end line / handle.
 "Just go" = the defaults.
 
