@@ -53,7 +53,9 @@ export function renderBubble({
   const maxLineLen = Math.max(...lines.map(l => l.length), 8);
 
   // Calculate box dimensions
-  const charWidth = fontSize * 0.58;
+  // Bengali / Devanagari glyphs are wider than Latin; detect and adjust
+  const isBengali = /[\u0980-\u09FF]/.test(text);
+  const charWidth = fontSize * (isBengali ? 0.72 : 0.58);
   const bubbleWidth = Math.max(260, Math.min(880, Math.round(maxLineLen * charWidth + paddingX * 2)));
   const bubbleHeight = Math.round(lines.length * lineHeight + paddingY * 2);
 
@@ -103,7 +105,7 @@ export function renderBubble({
       <line x1="${t1x + 2}" y1="${t1y}" x2="${t2x - 2}" y2="${t2y}" stroke="#FFFFFF" stroke-width="7"/>
 
       <!-- Dialogue text -->
-      <text font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="${fontSize}" fill="#1D1B18">
+      <text font-family="'Nirmala UI', 'Kalpurush', 'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="${fontSize}" fill="#1D1B18">
         ${textElements}
       </text>
     </g>

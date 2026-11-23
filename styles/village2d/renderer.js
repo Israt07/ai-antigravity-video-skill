@@ -39,7 +39,8 @@ export function buildSceneSVG({
         speakerY: dialogue.speakerY ?? 1050,
         x: dialogue.x,
         y: dialogue.y,
-        fontSize: dialogue.fontSize || 42
+        fontSize: dialogue.fontSize || 42,
+        maxChars: dialogue.maxChars || 22
       });
     }
   }
