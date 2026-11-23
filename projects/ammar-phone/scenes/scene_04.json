@@ -1,0 +1,37 @@
+{
+  "id": "scene_04",
+  "line_index": 3,
+  "text": "আম্মা! বলছি তো কাজে আছি, বারবার ফোন দাও কেন?! ফোনে মানুষ দেখা যায় নাকি? জরুরি থাকলে মেসেজ দিও!",
+  "at": 25.464,
+  "end": 38.04,
+  "duration": 12.576,
+  "audio": "scenes/scene_04.wav",
+  "clip": "out/scene_04.mp4",
+  "visuals": {
+    "background": "indoor-bench",
+    "characters": [
+      {
+        "id": "shumon",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#4A6B82",
+        "pants": "#2E3D48",
+        "expr": "surprised",
+        "anim": "talk",
+        "x": 480,
+        "y": 880,
+        "scale": 2.35
+      }
+    ],
+    "dialogue": {
+      "speakerId": "shumon",
+      "speakerX": 540,
+      "speakerY": 1140,
+      "text": "আম্মা! বলছি তো কাজে আছি, বারবার ফোন দাও কেন?!",
+      "fontSize": 34,
+      "maxChars": 16,
+      "start": 0.2,
+      "end": 12.28
+    }
+  }
+}

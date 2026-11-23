@@ -1,0 +1,39 @@
+{
+  "id": "scene_03",
+  "line_index": 2,
+  "text": "গ্রামে আম্মা প্রতিদিন একই কথা জানতে চাইতেন। বাবা, খাইছস? শরীর ভালো আছে? আমি সংক্ষেপে বলতাম—হ্যাঁ আম্মা, ভালো।",
+  "at": 18.48,
+  "end": 25.464,
+  "duration": 6.984,
+  "audio": "scenes/scene_03.wav",
+  "clip": "out/scene_03.mp4",
+  "visuals": {
+    "background": "house",
+    "characters": [
+      {
+        "id": "maa",
+        "age": "elder",
+        "outfit": "saree",
+        "hat": "pallu",
+        "shirt": "#FAF6EE",
+        "pants": "#A84B4B",
+        "glasses": true,
+        "expr": "happy",
+        "anim": "talk-still",
+        "x": 140,
+        "y": 880,
+        "scale": 2.3
+      }
+    ],
+    "dialogue": {
+      "speakerId": "maa",
+      "speakerX": 350,
+      "speakerY": 1140,
+      "text": "বাবা, খাইছস? শরীর ভালো আছে?",
+      "fontSize": 38,
+      "maxChars": 16,
+      "start": 0.2,
+      "end": 6.68
+    }
+  }
+}

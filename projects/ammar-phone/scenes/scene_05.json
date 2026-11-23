@@ -1,0 +1,39 @@
+{
+  "id": "scene_05",
+  "line_index": 4,
+  "text": "আচ্ছা বাবা... আর কোনোদিন ফোন দিমু না।",
+  "at": 38.04,
+  "end": 41.928,
+  "duration": 3.888,
+  "audio": "scenes/scene_05.wav",
+  "clip": "out/scene_05.mp4",
+  "visuals": {
+    "background": "house",
+    "characters": [
+      {
+        "id": "maa",
+        "age": "elder",
+        "outfit": "saree",
+        "hat": "pallu",
+        "shirt": "#FAF6EE",
+        "pants": "#A84B4B",
+        "glasses": true,
+        "expr": "neutral",
+        "anim": "talk-still",
+        "x": 300,
+        "y": 880,
+        "scale": 2.4
+      }
+    ],
+    "dialogue": {
+      "speakerId": "maa",
+      "speakerX": 450,
+      "speakerY": 1140,
+      "text": "আচ্ছা বাবা... আর কোনোদিন ফোন দিমু না।",
+      "fontSize": 38,
+      "maxChars": 16,
+      "start": 0.2,
+      "end": 3.59
+    }
+  }
+}

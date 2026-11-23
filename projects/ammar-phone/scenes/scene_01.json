@@ -1,0 +1,27 @@
+{
+  "id": "scene_01",
+  "line_index": 0,
+  "text": "আমার আম্মা প্রতিদিন বিকেলে আমাকে ফোন দিতেন। কিন্তু একদিন এমন একটা কথা বলেছিলাম... যার জন্য আজও আমি আফসোস করি।",
+  "at": 0.0,
+  "end": 8.928,
+  "duration": 8.928,
+  "audio": "scenes/scene_01.wav",
+  "clip": "out/scene_01.mp4",
+  "visuals": {
+    "background": "indoor-bench",
+    "characters": [
+      {
+        "id": "shumon",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#4A6B82",
+        "pants": "#2E3D48",
+        "expr": "neutral",
+        "anim": "idle",
+        "x": 540,
+        "y": 880,
+        "scale": 2.3
+      }
+    ]
+  }
+}

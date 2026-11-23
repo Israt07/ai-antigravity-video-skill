@@ -1,0 +1,27 @@
+{
+  "id": "scene_02",
+  "line_index": 1,
+  "text": "ছয় বছর ধরে প্রবাসে থাকি। প্রতি মাসে দেশে টাকা পাঠাই। ভাবতাম, পরিবারের জন্য টাকা পাঠাতে পারলেই বুঝি ভালো ছেলে হওয়া যায়।",
+  "at": 8.928,
+  "end": 18.48,
+  "duration": 9.552,
+  "audio": "scenes/scene_02.wav",
+  "clip": "out/scene_02.mp4",
+  "visuals": {
+    "background": "tea-stall",
+    "characters": [
+      {
+        "id": "shumon",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#4A6B82",
+        "pants": "#2E3D48",
+        "expr": "neutral",
+        "anim": "walk",
+        "x": 540,
+        "y": 880,
+        "scale": 2.3
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "scene_06",
+  "line_index": 5,
+  "text": "সেদিন ভেবেছিলাম ঝামেলা গেল। কিন্তু আমি জানতাম না... আম্মার ওই ফোন না আসাটাই একদিন জীবনের সবচেয়ে বড় কষ্ট হবে।",
+  "at": 41.928,
+  "end": 50.832,
+  "duration": 8.904,
+  "audio": "scenes/scene_06.wav",
+  "clip": "out/scene_06.mp4",
+  "visuals": {
+    "background": "indoor-bench",
+    "characters": [
+      {
+        "id": "shumon",
+        "age": "adult",
+        "outfit": "shirt",
+        "shirt": "#4A6B82",
+        "pants": "#2E3D48",
+        "expr": "neutral",
+        "anim": "idle",
+        "x": 540,
+        "y": 880,
+        "scale": 2.3
+      }
+    ]
+  }
+}
