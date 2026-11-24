@@ -19,10 +19,11 @@ local Whisper word timing, numpy sound. No AI images or video, no API keys, no c
 | **Paper Atlas** `paper-atlas` | history in cut paper: parchment maps, crimson routes, gold date ribbons, period figures | 30-45 s · 9:16 |
 | **Tall Tale 3D** `tall-tale` | funny true stories: flat 2D cartoon people (big round heads, ink outlines) acting in a sunny 3D small-town world, camera always moving, one-word captions | 40-60 s · 9:16 |
 | **Vintage Cartoon Moral** `vintage-cartoon-moral` | dark 1930s rubber-hose moral parables: anthropomorphic tempter wolf & pup, warm deal vs cold regret, Ken Burns push-in, scanlines & film grain | 45-65 s · 9:16 |
+| **Vintage Cartoon** `vintage-cartoon` | 1930s rubber-hose ink cartoon: wolf in pinstripe suit, pup in striped sweater & overalls, dark grey/sepia/navy, warm lamp, moonlight, film grain & scanlines | 25-45 s · 9:16 |
 
 Which style: body / health / science "what happens if" → **Deep Dive 3D** (or **Inside Out** for a lighter, faster 2D
 look) · creepy, unexplained, true crime, "this happened in 1971" → **Night File 3D** · survival, life hacks, "here's what
-you do" → **Stick Story** · a historical event, "how X happened" → **Paper Atlas** · a funny or clever true story, a con, a loophole, "this guy did X" → **Tall Tale 3D** · a dark moral choice, life regret, "what if ten years from now", 1930s rubber-hose parable → **Vintage Cartoon Moral**. If it isn't obvious, ask once.
+you do" → **Stick Story** · a historical event, "how X happened" → **Paper Atlas** · a funny or clever true story, a con, a loophole, "this guy did X" → **Tall Tale 3D** · a dark moral choice, life regret, "what if ten years from now", 1930s rubber-hose parable → **Vintage Cartoon Moral** · 1930s rubber-hose ink cartoon, wolf & pup, warm lamp vs moonlight → **Vintage Cartoon**. If it isn't obvious, ask once.
 
 Each style = `styles/<style>/style-sheet.png` (the look in one image, drawn by the style's own code) + `STYLE.md` (the rules + the engine manual) +
 `example/` (a complete project that renders as-is). **Read the style's STYLE.md in full before planning.**

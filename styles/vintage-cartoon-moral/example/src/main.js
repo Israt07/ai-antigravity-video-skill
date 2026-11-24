@@ -23,7 +23,7 @@ function draw(t) {
   while (i > 0 && S[i].at > t) i--;
   const sh = S[i];
   const end = i < S.length - 1 ? S[i + 1].at : T.dur;
-  const d = end - sh.at;
+  const d = Math.max(1e-4, end - sh.at);
   const lt = t - sh.at;
 
   // Ken Burns camera motion: slow push-in (1.0 -> 1.12) or gentle pan

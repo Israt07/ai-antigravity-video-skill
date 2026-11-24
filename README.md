@@ -11,6 +11,7 @@ word-synced captions, animation, sound effects and music, rendered to MP4. No AI
 5. **Paper Atlas**: history in cut paper and maps. Example: *How one bakery burned down London*.
 6. **Tall Tale 3D**: funny true stories, flat 2D cartoon people in a sunny 3D world. Example: *The girl who was mailed to grandma*.
 7. **Vintage Cartoon Moral**: dark 1930s rubber-hose moral parables, warm deal vs cold regret, scanlines & film grain. Example: *The Last Warm Meal*.
+8. **Vintage Cartoon**: 1930s rubber-hose ink cartoon (wolf in pinstripes, pup in overalls), dark grey/sepia/navy palette, warm lamp, moonlit windows, film grain + scanlines. Example: *The Ten Year Deal*.
 
 ---
 
@@ -19,7 +20,25 @@ script.json → Kokoro voice (local, free) → Whisper word timings (local, free
 placed on its word → procedural sound + music → headless Chrome captures every frame → ffmpeg renders the MP4.
 The engine checks a contact sheet of the whole video before you ever see it.
 Optional: when requested, the agent can upload the finished short to your YouTube channel through Zapier (it confirms title, visibility and category first).
-
+PS C:\Users\israt\Desktop\ai-antigravity-video-skill-main\ai-antigravity-video-skill-main> cd c:\Users\israt\Desktop\ai-antigravity-video-skill-main\ai-antigravity-video-skill-main\studio
+PS C:\Users\israt\Desnpm startntigravity-video-skill-main\ai-antigravity-video-skill-main\studio>
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see 
+about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npm start
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\israt\Desktop\ai-antigravity-video-skill-main\ai-antigravity-video-skill-main\studio> npm start
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see 
+about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npm start
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\israt\Desktop\ai-antigravity-video-skill-main\ai-antigravity-video-skill-main\studio> ^C
+PS C:\Users\israt\Desktop\ai-antigravity-video-skill-main\ai-antigravity-video-skill-main\studio>
 **Needs:** Antigravity / Agentic Assistant (or any environment with terminal/bash execution), Node.js 22+, ffmpeg, Google Chrome, Python 3.10+, ~1 GB for the
 voice and Whisper models. Automated scripts install what's missing.
 

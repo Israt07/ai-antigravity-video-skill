@@ -15,7 +15,7 @@ function draw(t) {
   t = clamp(t, 0, T.dur - 1e-4);
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
   const S = OP._shots; let i = S.length - 1; while (i > 0 && S[i].at > t) i--;
-  const sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = end - sh.at, lt = t - sh.at;
+  const sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = Math.max(1e-4, end - sh.at), lt = t - sh.at;
   const blit = () => ctx.drawImage(GL, 0, 0, W, H);
   ctx.save(); sh.draw(lt, d, t, blit); ctx.restore();
   ctx.globalAlpha = 1; ctx.letterSpacing = '0px';

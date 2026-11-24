@@ -14,7 +14,7 @@ function draw(t) {
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
   ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
   const S = OP._shots; let i = S.length - 1; while (i > 0 && S[i].at > t) i--;
-  const sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = end - sh.at, lt = t - sh.at;
+  const sh = S[i], end = i < S.length - 1 ? S[i + 1].at : T.dur, d = Math.max(1e-4, end - sh.at), lt = t - sh.at;
   // camera: punch-in on the cut + a slow push across the shot ("camera always moving")
   const punch = 1 + 0.13 * (1 - eo(clamp(lt / 0.32)));
   const drift = 1 + (sh.zoom ?? 0.06) * eio(clamp(lt / d));

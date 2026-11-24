@@ -1,0 +1,65 @@
+{
+  "title": "The Ten Year Deal",
+  "style": "vintage-cartoon",
+  "voice": "am_michael",
+  "speed": 1.0,
+  "lead": 0.45,
+  "outro": 0.9,
+  "gap": 0.35,
+  "music": "bed",
+  "sources": [
+    "1930s rubber-hose moral parable"
+  ],
+  "lines": [
+    {
+      "text": "What if ten years from now, you wake up and completely hate your life?",
+      "caps": "WHAT IF *TEN YEARS | YOU HATE *YOUR LIFE?",
+      "gap": 0.35
+    },
+    {
+      "text": "A wolf in a pinstripe suit slides a golden pen across the desk: 'Sign here, kid.'",
+      "caps": "WOLF SLIDES *GOLDEN PEN | SIGN *HERE KID",
+      "gap": 0.35
+    },
+    {
+      "text": "'An easy road. No struggle. Just skip the hard years.'",
+      "caps": "AN *EASY ROAD | NO *STRUGGLE",
+      "gap": 0.35
+    },
+    {
+      "text": "The young pup hesitates, clutching his ears: 'Is there really no catch?'",
+      "caps": "PUP *HESITATES | IS THERE *NO CATCH?",
+      "gap": 0.35
+    },
+    {
+      "text": "'None at all,' the wolf whispers with a sly grin. 'Just sign your twenties away.'",
+      "caps": "NONE *AT ALL | SIGN YOUR *TWENTIES AWAY",
+      "gap": 0.4
+    },
+    {
+      "text": "With a trembling paw, he signs... and the room fades to black.",
+      "caps": "TREMBLING *PAW SIGNS | FADES TO *BLACK",
+      "gap": 0.45
+    },
+    {
+      "text": "Three in the morning. Lying awake in the dead blue glare of a phone.",
+      "caps": "THREE *IN THE MORNING | DEAD *BLUE GLARE",
+      "gap": 0.35
+    },
+    {
+      "text": "In the dusty mirror, he clutches an old photo of who he used to be.",
+      "caps": "DUSTY *MIRROR | WHO HE *USED TO BE",
+      "gap": 0.4
+    },
+    {
+      "text": "Suddenly, you snap back to that warm room. The contract lies unsigned.",
+      "caps": "BACK IN *THAT ROOM | CONTRACT *UNSIGNED",
+      "gap": 0.35
+    },
+    {
+      "text": "Ten years were just handed back to you. So what will you choose today?",
+      "caps": "HANDED *BACK TO YOU | WHAT WILL YOU *CHOOSE?",
+      "gap": 0.5
+    }
+  ]
+}

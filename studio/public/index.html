@@ -582,6 +582,21 @@ async function createProject() {
 
   const { slug } = await r.json();
 
+  // Split hook or story into individual sentences/lines
+  let lines = [];
+  if (hook) {
+    const raw = hook
+      .split(/(?<=[.!?])\s+|\r?\n+/)
+      .map(s => s.trim())
+      .filter(Boolean);
+    if (raw.length > 0) {
+      lines = raw.map(text => ({ text }));
+    }
+  }
+  if (!lines.length) {
+    lines = [{ text: hook || "Write your script lines here." }];
+  }
+
   // Build a starter script.json with the user's input
   const starterScript = {
     title,
@@ -594,9 +609,7 @@ async function createProject() {
     gap: 0.18,
     music,
     sources: [],
-    lines: [
-      { text: hook || "Write your script lines here." }
-    ]
+    lines
   };
 
   await fetch(`/api/projects/${slug}/script`, {
