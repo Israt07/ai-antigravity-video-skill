@@ -211,6 +211,41 @@ function copyDirSync(src, dst) {
   }
 }
 
+// ── API: AI configuration (Gemini / Ollama) ───────────────────────────────
+const CONFIG_FILE = path.join(process.env.USERPROFILE || process.env.HOME, '.faceless-shorts', 'config.json');
+
+app.get('/api/config', (_req, res) => {
+  let cfg = { provider: 'auto', gemini_model: 'gemini-2.0-flash', ollama_model: 'qwen2.5:7b', ollama_url: 'http://localhost:11434', has_gemini_key: false };
+  if (fs.existsSync(CONFIG_FILE)) {
+    try {
+      const u = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+      cfg = { ...cfg, ...u };
+      cfg.has_gemini_key = Boolean(u.gemini_api_key || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY);
+      delete cfg.gemini_api_key;
+    } catch {}
+  } else {
+    cfg.has_gemini_key = Boolean(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY);
+  }
+  res.json(cfg);
+});
+
+app.post('/api/config', (req, res) => {
+  const { provider, gemini_api_key, gemini_model, ollama_model, ollama_url } = req.body;
+  let cur = {};
+  if (fs.existsSync(CONFIG_FILE)) {
+    try { cur = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8')); } catch {}
+  }
+  if (provider) cur.provider = provider;
+  if (gemini_api_key !== undefined) cur.gemini_api_key = gemini_api_key;
+  if (gemini_model) cur.gemini_model = gemini_model;
+  if (ollama_model) cur.ollama_model = ollama_model;
+  if (ollama_url) cur.ollama_url = ollama_url;
+
+  fs.mkdirSync(path.dirname(CONFIG_FILE), { recursive: true });
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(cur, null, 2), 'utf8');
+  res.json({ ok: true });
+});
+
 // ── API: run pipeline step by step ────────────────────────────────────────
 app.post('/api/projects/:name/run/:step', async (req, res) => {
   const { name, step } = req.params;
@@ -229,6 +264,11 @@ app.post('/api/projects/:name/run/:step', async (req, res) => {
       case 'alignment': {
         await runStep(name, 'alignment', PYTHON,
           [path.join(SCRIPTS, 'words.py'), dir], dir);
+        break;
+      }
+      case 'shots': {
+        await runStep(name, 'shots', PYTHON,
+          [path.join(SCRIPTS, 'generate_shots.py'), dir], dir);
         break;
       }
       case 'check': {
@@ -270,7 +310,7 @@ app.post('/api/projects/:name/run-all', async (req, res) => {
   const dir = path.join(PROJECTS_ROOT, name);
   if (!fs.existsSync(dir)) return res.status(404).json({ error: 'project not found' });
 
-  const steps = ['narration', 'alignment', 'check', 'cues', 'mix', 'sheet', 'render'];
+  const steps = ['narration', 'alignment', 'shots', 'check', 'cues', 'mix', 'sheet', 'render'];
   res.json({ started: true, steps });
 
   broadcast(name, 'pipeline', { status: 'running', steps });
@@ -284,23 +324,27 @@ app.post('/api/projects/:name/run-all', async (req, res) => {
     await runStep(name, 'alignment', PYTHON,
       [path.join(SCRIPTS, 'words.py'), dir], dir);
 
-    // 3. Check shots
+    // 3. AI Visual shots
+    await runStep(name, 'shots', PYTHON,
+      [path.join(SCRIPTS, 'generate_shots.py'), dir], dir);
+
+    // 4. Check shots
     await runStep(name, 'check', 'node',
       [path.join(dir, 'tools', 'capture.mjs'), 'check'], dir);
 
-    // 4. Sound cues
+    // 5. Sound cues
     await runStep(name, 'cues', 'node',
       [path.join(dir, 'tools', 'capture.mjs'), 'cues'], dir);
 
-    // 5. Audio mix
+    // 6. Audio mix
     await runStep(name, 'mix', PYTHON,
       [path.join(dir, 'tools', 'mix.py'), '.'], dir);
 
-    // 6. Contact sheet
+    // 7. Contact sheet
     await runStep(name, 'sheet', 'node',
       [path.join(dir, 'tools', 'capture.mjs'), 'sheet', 'renders/sheet.png'], dir);
 
-    // 7. Render video
+    // 8. Render video
     await runStep(name, 'render', 'node',
       [path.join(dir, 'tools', 'capture.mjs'), 'video', `renders/${name}.mp4`], dir);
 
