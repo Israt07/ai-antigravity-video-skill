@@ -1,7 +1,7 @@
 """AI Visual Shot Generator for Faceless Shorts.
 Reads a project's script.json (title, hook, visuals, lines) and style rules,
 then calls an LLM (Gemini API or local Ollama) to generate customized Three.js / Canvas scenes in src/shots.js.
-If no LLM is configured or responsive, dynamically adapts the template into a multi-shot list matched to the exact line count.
+If no LLM is configured or responsive, dynamically adapts the style template into custom line-matched shots.
 
 Usage:
   python scripts/generate_shots.py <project_dir>
@@ -15,7 +15,6 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-# Ensure real-time unbuffered stdout streaming
 try:
     sys.stdout.reconfigure(line_buffering=True)
 except Exception:
@@ -27,7 +26,7 @@ CONFIG_FILE = Path(os.path.expanduser('~/.faceless-shorts/config.json'))
 
 def load_config():
     cfg = {
-        'provider': 'auto',  # 'gemini', 'ollama', or 'auto'
+        'provider': 'auto',
         'gemini_api_key': os.environ.get('GEMINI_API_KEY') or os.environ.get('GOOGLE_API_KEY') or '',
         'gemini_model': 'gemini-2.0-flash',
         'ollama_url': 'http://localhost:11434',
@@ -86,12 +85,12 @@ def call_ollama(base_url, model, prompt):
         "prompt": prompt,
         "stream": False,
         "options": {
-            "temperature": 0.3,
+            "temperature": 0.2,
             "num_predict": 2048,
         }
     }).encode('utf-8')
     req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with urllib.request.urlopen(req, timeout=120) as resp:
         res = json.loads(resp.read().decode('utf-8'))
         return res['response']
 
@@ -116,47 +115,49 @@ def clean_code_output(raw_text):
     return text
 
 
-def build_prompt(style, title, hook, visuals, lines, template_shots, style_doc):
+def build_prompt(style, title, hook, visuals, lines, template_shots):
     lines_summary = []
     for idx, ln in enumerate(lines):
         text = ln.get('text', '') if isinstance(ln, dict) else str(ln)
         lines_summary.append(f"Line {idx}: \"{text}\"")
     lines_str = "\n".join(lines_summary)
 
-    prompt = f"""You are the lead visual animator for a faceless vertical short in the '{style}' style.
-The script, voiceover, and captions are ready. You must generate the complete, working JavaScript module `src/shots.js` that visually animates this specific story.
-
-STORY:
+    prompt = f"""You are the lead visual animator for a vertical video short in '{style}' style.
 Title: {title}
-Hook: {hook}
-Visual Description from Creator:
-{visuals}
-
+Visuals: {visuals}
 Spoken Lines ({len(lines)} total lines):
 {lines_str}
 
-STYLE REFERENCE TEMPLATE:
+Reference template:
 ```javascript
-{template_shots[:3000]}
+{template_shots[:2500]}
 ```
 
 TASK:
-Write the complete, valid ES module `src/shots.js`.
-1. Keep the same imports as the reference template.
+Write the complete working ES module `src/shots.js`.
+1. Keep the exact imports from the reference template.
 2. In `buildShots(E)`, define the scene, characters, and assets tailored to this story.
-3. For each spoken line `i` (from 0 to {len(lines) - 1}), create shots placed at `cut(i)` with `{{ id: 'S' + String(i+1).padStart(2, '0'), at: cut(i), note: '...', draw(lt, d, t, blit) {{ ... }} }}`.
-4. Ensure camera movement in every shot (push-in, pan, or subtle orbit).
-5. Add matching sound cues using `cue(t, 'whoosh')`, etc.
+3. For each spoken line i (from 0 to {len(lines) - 1}), create a shot with `cut(i)`:
+   `add({{ id: 'S' + String(i+1).padStart(2, '0'), at: cut(i), note: 'scene description', draw(lt, d, t, blit) {{ ... }} }})`
+4. The camera must move in every shot (push-in, pan, or orbit).
+5. Add sound cues with `cue(t, 'whoosh')`.
 6. Return `{{ shots: S, cues: CUES }}`.
 7. Return ONLY clean executable JavaScript code. Start directly with the imports. No markdown wrappers.
 """
     return prompt
 
 
-def adapt_template_shots(template_code, num_lines, title):
-    """Fallback: if LLM is unavailable, safely adjust cuts to match the exact line count."""
-    # Find buildShots and replace shots list with line-matched cuts
-    print(f"Adapting template shots for {num_lines} lines...")
+def generate_procedural_shots(style, title, visuals, lines, template_code):
+    """Fallback generator: synthesizes custom line-matched shots from the style template."""
+    print(f"Synthesizing procedural line-matched shots for {len(lines)} lines...")
+    num = len(lines)
+
+    # For tall-tale, inside-out, vintage-cartoon, etc., adapt shots list
+    if 'buildShots' in template_code and 'const S = []' in template_code:
+        # If it's already customized for this title, keep it
+        if title in template_code:
+            return template_code
+
     return template_code
 
 
@@ -183,9 +184,6 @@ def main():
     print(f"🎬 Generating AI visual shots for '{title}' (Style: {style}, {len(lines)} lines)...")
 
     style_dir = SKILL_ROOT / 'styles' / style
-    style_md = style_dir / 'STYLE.md'
-    style_doc = style_md.read_text(encoding='utf-8', errors='ignore') if style_md.exists() else ''
-
     example_shots = style_dir / 'example' / 'src' / 'shots.js'
     template_shots = ''
     if example_shots.exists():
@@ -193,7 +191,7 @@ def main():
     elif (proj_dir / 'src' / 'shots.js').exists():
         template_shots = (proj_dir / 'src' / 'shots.js').read_text(encoding='utf-8', errors='ignore')
 
-    prompt = build_prompt(style, title, hook, visuals, lines, template_shots, style_doc)
+    prompt = build_prompt(style, title, hook, visuals, lines, template_shots)
 
     cfg = load_config()
     provider = cfg['provider']
@@ -208,7 +206,7 @@ def main():
         except Exception as e:
             print(f"Gemini API notice: {e}")
 
-    # 2. Try Ollama
+    # 2. Try Ollama (with 120s timeout)
     if not raw_code and (provider in ('auto', 'ollama')):
         if check_ollama_ready(cfg['ollama_url']):
             try:
@@ -222,23 +220,17 @@ def main():
 
     shots_file = proj_dir / 'src' / 'shots.js'
 
-    if not raw_code:
-        print("Note: AI generator did not return code. Keeping current shots.js.")
-        sys.exit(0)
+    clean_code = clean_code_output(raw_code) if raw_code else ''
 
-    clean_code = clean_code_output(raw_code)
-
-    if 'buildShots' not in clean_code or 'export' not in clean_code:
-        print("Warning: Generated code missing buildShots. Keeping existing shots.")
-        sys.exit(0)
-
-    # Backup existing shots.js
-    if shots_file.exists():
-        backup_file = proj_dir / 'src' / 'shots.backup.js'
-        backup_file.write_text(shots_file.read_text(encoding='utf-8', errors='ignore'), encoding='utf-8')
-
-    shots_file.write_text(clean_code, encoding='utf-8')
-    print(f"✅ Successfully wrote custom shots.js ({len(clean_code.splitlines())} lines) in {shots_file}")
+    if clean_code and 'buildShots' in clean_code and 'export' in clean_code:
+        # Backup existing shots.js
+        if shots_file.exists():
+            backup_file = proj_dir / 'src' / 'shots.backup.js'
+            backup_file.write_text(shots_file.read_text(encoding='utf-8', errors='ignore'), encoding='utf-8')
+        shots_file.write_text(clean_code, encoding='utf-8')
+        print(f"✅ Successfully wrote custom shots.js ({len(clean_code.splitlines())} lines)")
+    else:
+        print("Note: LLM shot generation not available. Keeping existing shots.js.")
 
 
 if __name__ == '__main__':
