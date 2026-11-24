@@ -1,0 +1,39 @@
+{
+ "duration": 62.111,
+ "cues": [
+  {
+   "t": 0.5,
+   "type": "clock",
+   "dur": 3.5,
+   "gain": 0.8
+  },
+  {
+   "t": 6.21,
+   "type": "slide",
+   "dur": 0.8,
+   "gain": 0.7
+  },
+  {
+   "t": 26.276,
+   "type": "pen",
+   "dur": 0.9,
+   "gain": 0.9
+  },
+  {
+   "t": 31.513,
+   "type": "thud",
+   "gain": 0.8
+  },
+  {
+   "t": 37.343,
+   "type": "tock",
+   "gain": 0.7
+  },
+  {
+   "t": 50.519,
+   "type": "whoosh",
+   "dur": 0.6,
+   "gain": 0.8
+  }
+ ]
+}
