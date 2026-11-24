@@ -1,66 +1,72 @@
 {
- "duration": 62.111,
+ "duration": 66.39,
  "estimated": true,
  "lines": [
   {
    "i": 0,
-   "text": "What if ten years from now, you wake up and completely hate your life?",
+   "text": "What if one warm meal kept you in a place you were never meant to stay?",
    "start": 0.4,
-   "end": 5.56
+   "end": 6.114
   },
   {
    "i": 1,
-   "text": "The wolf slides a golden pen across the mahogany table: 'Sign here, kid. An easy road. No struggle.'",
-   "start": 5.91,
-   "end": 13.139
+   "text": "A tired rabbit steps inside an old roadside inn, shivering from the winter storm.",
+   "start": 6.464,
+   "end": 11.624
   },
   {
    "i": 2,
-   "text": "The young pup hesitates, clutching his ears in doubt: 'Is there really no catch?'",
-   "start": 13.489,
-   "end": 18.649
+   "text": "The fox behind the counter slides over hot stew: 'Eat up, kid. First bowl is free.'",
+   "start": 11.974,
+   "end": 18.169
   },
   {
    "i": 3,
-   "text": "'None at all,' the wolf whispers with a sly wink. 'Just sign your twenties away.'",
-   "start": 18.999,
-   "end": 24.676
+   "text": "The rabbit clutches his packed bag: 'I should keep moving. My train leaves tonight.'",
+   "start": 18.519,
+   "end": 23.839
   },
   {
    "i": 4,
-   "text": "With a trembling paw, the pup signs the parchment... and the room fades to black.",
-   "start": 25.076,
-   "end": 30.913
+   "text": "'The tracks are frozen,' the fox purrs with a wink. 'Just stay until morning.'",
+   "start": 24.189,
+   "end": 29.509
   },
   {
    "i": 5,
-   "text": "Ten years pass in an instant. A cold, lifeless office under buzzing fluorescent lights.",
-   "start": 31.413,
-   "end": 36.893
+   "text": "He stayed that morning. And the next. And twenty years vanished in the dark.",
+   "start": 29.909,
+   "end": 35.549
   },
   {
    "i": 6,
-   "text": "Three in the morning. Lying awake in bed, bathed in the dead blue glare of a phone.",
-   "start": 37.243,
-   "end": 43.794
+   "text": "A cold highway diner under buzzing fluorescent tubes. An older rabbit wipes the counter.",
+   "start": 36.049,
+   "end": 41.369
   },
   {
    "i": 7,
-   "text": "In the dusty bathroom mirror, he clutches an old photo of who he used to be.",
-   "start": 44.144,
-   "end": 50.019
+   "text": "Out on the rusted platform, the midnight train pulls away, disappearing into the fog.",
+   "start": 41.719,
+   "end": 47.039
   },
   {
    "i": 8,
-   "text": "And suddenly, you are back in that warm room. The contract lies unsigned.",
-   "start": 50.419,
-   "end": 55.541
+   "text": "Three in the morning. In shaking paws, he unfolds the ticket he never used.",
+   "start": 47.389,
+   "end": 52.869
   },
   {
    "i": 9,
-   "text": "Ten years were just handed back to you. So what will you choose today?",
-   "start": 55.891,
-   "end": 61.211
+   "text": "Suddenly, you snap back to the warm tavern. The stew is hot. Your bag is packed.",
+   "start": 53.269,
+   "end": 59.783
+  },
+  {
+   "i": 10,
+   "text": "The fox smiles: 'One more night?' You grab your coat and walk into the snow.",
+   "start": 60.133,
+   "end": 65.49
   }
  ]
 }

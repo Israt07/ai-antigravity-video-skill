@@ -109,6 +109,16 @@ def thud(**_):
     x = sweep(140, 45, d) * env(int(d * SR), 0.005, 7)
     return lp(x, 300) * 0.85
 
+def whistle(d=1.4, **_):
+    # Distant 1930s steam train twin-tone whistle
+    t = tt(d)
+    w1 = np.sin(2 * np.pi * 440 * t)
+    w2 = np.sin(2 * np.pi * 554.37 * t)
+    n = bp(noise(d), 300, 2000) * 0.12
+    e = env(len(t), 0.18, 2.2)
+    x = (w1 * 0.6 + w2 * 0.5 + n) * e
+    return bp(x, 250, 1800) * 0.7
+
 FX = {
     'whoosh': whoosh,
     'slide': slide,
@@ -116,7 +126,8 @@ FX = {
     'tock': tock,
     'pen': pen,
     'paper': paper,
-    'thud': thud
+    'thud': thud,
+    'whistle': whistle
 }
 
 LEVEL = {
@@ -126,7 +137,8 @@ LEVEL = {
     'tock': -9,
     'pen': -8,
     'paper': -8,
-    'thud': -5
+    'thud': -5,
+    'whistle': -7
 }
 
 

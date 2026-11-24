@@ -5,7 +5,7 @@
 import { ctx, C, clamp, lerp, seg, eob } from './lib.js';
 import { T, lineWords } from './timing.js';
 
-export const CAP = { y: 1400, size: 150, maxW: 900 };
+export const CAP = { y: 1400, size: 140, maxW: 900 };
 let caps = [];
 
 function autoChunks(text) {
@@ -23,7 +23,6 @@ export function buildCaptions(script) {
     const nm = (w) => String(w).toLowerCase().replace(/[^a-z0-9']+/g, '');
     let acc = 0, from = 0;
     chunks.forEach((c, j) => {
-      // find the chunk's first word in the spoken line (from where the last chunk started); else place it by word count
       const first = nm(c.split(/\s+/)[0]);
       let idx = j === 0 ? 0 : ws.findIndex((w, k) => k > from && first && (nm(w.w) === first || (first.length > 2 && nm(w.w).startsWith(first))));
       if (idx < 0) idx = Math.max(from + (j ? 1 : 0), Math.min(ws.length - 1, Math.round(acc * ws.length / N)));
@@ -39,7 +38,7 @@ export function buildCaptions(script) {
 }
 export const captionList = () => caps;
 
-export function drawCaption(t) {
+export function drawCaption(t, overrideY) {
   const c = caps.find((c) => t >= c.s && t < c.e); if (!c) return;
   const lt = t - c.s, size = CAP.size;
   ctx.font = `900 ${size}px Inter`; ctx.letterSpacing = '-2px';
@@ -54,7 +53,8 @@ export function drawCaption(t) {
   }
   const fit = Math.min(1, CAP.maxW / Math.max(...lines.map(width)));
   const sc = (lt < 0.2 ? lerp(0.65, 1, eob(seg(lt, 0, 0.2))) : 1) * fit;
-  ctx.save(); ctx.translate(540, CAP.y); ctx.scale(sc, sc);
+  const targetY = overrideY ?? CAP.y;
+  ctx.save(); ctx.translate(540, targetY); ctx.scale(sc, sc);
   ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.lineJoin = 'round';
   const lh = size, y0 = -(lines.length - 1) * lh / 2;
   lines.forEach((ln, li) => {

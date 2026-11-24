@@ -1,5 +1,5 @@
 {
-  "title": "The Ten Year Deal",
+  "title": "The Last Warm Meal",
   "style": "vintage-cartoon-moral",
   "format": "9:16 vertical 1080x1920",
   "music": "vintage_moral",
@@ -8,107 +8,83 @@
   "sources": [
     "Original 1930s rubber-hose moral parable"
   ],
-  "character_consistency_block": "1930s vintage rubber-hose cartoon style, bold black ink outlines, flat desaturated shading, authentic retro film texture. TEMPTER: Anthropomorphic tall slender wolf, charcoal grey pinstripe suit, white collared shirt, muted crimson red necktie, white 3-dart cartoon gloves, sharp jaw, wide sly grin with pointed white teeth, classic black pacman pie-eyes, pointed wolf ears. VICTIM: Anthropomorphic small young pup dog, floppy ears, large expressive pie-eyes, cream sweater with muted red horizontal stripes, denim blue overalls with brass buttons, white cartoon gloves.",
   "lines": [
     {
       "id": "scene_01",
-      "text": "What if ten years from now, you wake up and completely hate your life?",
-      "caps": "WHAT IF *TEN YEARS | YOU HATE *YOUR LIFE?",
+      "text": "What if one warm meal kept you in a place you were never meant to stay?",
+      "caps": "WHAT IF ONE *WARM MEAL | KEPT YOU *FOREVER?",
       "gap": 0.35,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 960] },
-      "transition": "iris-in",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Dark 1930s study, antique mahogany desk, warm golden oil lamp casting amber light, sliver of crescent moon through arched window. The Wolf leans over the desk with a sharp toothy grin. The small pup sits opposite, looking startled."
+      "mood": "warm"
     },
     {
       "id": "scene_02",
-      "text": "The wolf slides a golden pen across the mahogany table: 'Sign here, kid. An easy road. No struggle.'",
-      "caps": "SIGN *HERE KID | AN *EASY ROAD",
+      "text": "A tired rabbit steps inside an old roadside inn, shivering from the winter storm.",
+      "caps": "TIRED *RABBIT STEPS INSIDE | SHIVERING FROM *THE STORM",
       "gap": 0.35,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 1100] },
-      "transition": "none",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Close-up on the mahogany desk surface. The Wolf's white gloved hand slides a golden fountain pen and yellowed parchment contract across the desk toward the young pup."
+      "mood": "warm"
     },
     {
       "id": "scene_03",
-      "text": "The young pup hesitates, clutching his ears in doubt: 'Is there really no catch?'",
-      "caps": "PUP *HESITATES | IS THERE *NO CATCH?",
+      "text": "The fox behind the counter slides over hot stew: 'Eat up, kid. First bowl is free.'",
+      "caps": "SLIDES OVER *HOT STEW | FIRST BOWL *IS FREE",
       "gap": 0.35,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 850] },
-      "transition": "none",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Over-the-shoulder shot. The small pup in his red-striped sweater and denim overalls clutches his floppy ears, gazing down at the glowing parchment with worried round pie-eyes."
+      "mood": "warm"
     },
     {
       "id": "scene_04",
-      "text": "'None at all,' the wolf whispers with a sly wink. 'Just sign your twenties away.'",
-      "caps": "NONE *AT ALL | SIGN YOUR *TWENTIES AWAY",
-      "gap": 0.4,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 750] },
-      "transition": "none",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Macro tight close-up on the Wolf's face. Cunning pie-eyes with a devious wink, wide curved grin showing needle-sharp white teeth, warm amber glow on sharp cheek fur."
+      "text": "The rabbit clutches his packed bag: 'I should keep moving. My train leaves tonight.'",
+      "caps": "CLUTCHES *PACKED BAG | TRAIN LEAVES *TONIGHT",
+      "gap": 0.35,
+      "mood": "warm"
     },
     {
       "id": "scene_05",
-      "text": "With a trembling paw, the pup signs the parchment... and the room fades to black.",
-      "caps": "TREMBLING *PAW SIGNS | FADES TO *BLACK",
-      "gap": 0.5,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.14, "focus": [540, 1050] },
-      "transition": "iris-out",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Extreme close-up of the pup's white gloved hand pressing the ink pen to the signature line. The black ink bleeds across the parchment as an oval iris vignette closes into darkness."
+      "text": "'The tracks are frozen,' the fox purrs with a wink. 'Just stay until morning.'",
+      "caps": "TRACKS *ARE FROZEN | STAY UNTIL *MORNING",
+      "gap": 0.4,
+      "mood": "warm"
     },
     {
       "id": "scene_06",
-      "text": "Ten years pass in an instant. A cold, lifeless office under buzzing fluorescent lights.",
-      "caps": "TEN YEARS *PASS | COLD *LIFELESS OFFICE",
-      "gap": 0.35,
-      "mood": "cold",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 960] },
-      "transition": "fade-black",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Cold desaturated slate-blue palette. The older pup sits alone in a drab gray cubicle, slumped over towering piles of paperwork beneath a buzzing fluorescent tube."
+      "text": "He stayed that morning. And the next. And twenty years vanished in the dark.",
+      "caps": "HE *STAYED THAT MORNING | TWENTY YEARS *VANISHED",
+      "gap": 0.5,
+      "mood": "warm"
     },
     {
       "id": "scene_07",
-      "text": "Three in the morning. Lying awake in bed, bathed in the dead blue glare of a phone.",
-      "caps": "THREE *IN THE MORNING | DEAD *BLUE GLARE",
+      "text": "A cold highway diner under buzzing fluorescent tubes. An older rabbit wipes the counter.",
+      "caps": "COLD *HIGHWAY DINER | WIPES THE *COUNTER",
       "gap": 0.35,
-      "mood": "cold",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 920] },
-      "transition": "none",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Dark monochrome bedroom. Digital clock reads 03:00 AM. Cold cyan smartphone light illuminates the pup's exhausted face, hollow eye bags, and slumped shoulders."
+      "mood": "cold"
     },
     {
       "id": "scene_08",
-      "text": "In the dusty bathroom mirror, he clutches an old photo of who he used to be.",
-      "caps": "DUSTY *MIRROR | WHO HE *USED TO BE",
-      "gap": 0.4,
-      "mood": "cold",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 800] },
-      "transition": "none",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Cold desaturated bathroom mirror reflection. The tired older pup stares at himself with a tear running down his cheek, clutching a worn sepia photo of his smiling young self."
+      "text": "Out on the rusted platform, the midnight train pulls away, disappearing into the fog.",
+      "caps": "MIDNIGHT TRAIN *PULLS AWAY | DISAPPEARING INTO *THE FOG",
+      "gap": 0.35,
+      "mood": "cold"
     },
     {
       "id": "scene_09",
-      "text": "And suddenly, you are back in that warm room. The contract lies unsigned.",
-      "caps": "BACK IN THAT *WARM ROOM | CONTRACT *UNSIGNED",
-      "gap": 0.35,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 900] },
-      "transition": "iris-in",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] Return to the warm amber lamp light. The blank contract and golden pen sit untouched on the mahogany desk. The Wolf leans in, watching hungrily."
+      "text": "Three in the morning. In shaking paws, he unfolds the ticket he never used.",
+      "caps": "THREE *IN THE MORNING | TICKET HE *NEVER USED",
+      "gap": 0.4,
+      "mood": "cold"
     },
     {
       "id": "scene_10",
-      "text": "Ten years were just handed back to you. So what will you choose today?",
-      "caps": "HANDED *BACK TO YOU | WHAT WILL YOU *CHOOSE?",
+      "text": "Suddenly, you snap back to the warm tavern. The stew is hot. Your bag is packed.",
+      "caps": "SNAP *BACK TO TAVERN | BAG IS *PACKED",
+      "gap": 0.35,
+      "mood": "warm"
+    },
+    {
+      "id": "scene_11",
+      "text": "The fox smiles: 'One more night?' You grab your coat and walk into the snow.",
+      "caps": "ONE *MORE NIGHT? | WALK INTO *THE SNOW",
       "gap": 0.5,
-      "mood": "warm",
-      "camera": { "move": "push-in", "from": 1.0, "to": 1.12, "focus": [540, 850] },
-      "transition": "iris-out",
-      "visual_prompt": "[CHARACTER CONSISTENCY BLOCK] The young pup pushes the pen away, standing upright with determined pie-eyes. Oval iris transition closes smoothly on the pup's hopeful face."
+      "mood": "warm"
     }
   ]
 }

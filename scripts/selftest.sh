@@ -10,6 +10,7 @@ VOICE=1; [ "${1:-}" = "--no-voice" ] && VOICE=0
 fail=0; note() { printf '%-22s %s\n' "$1" "$2"; }
 for d in "$SKILL"/styles/*/; do
   s=$(basename "$d"); P="$T/$s"; t1=$(date +%s)
+  [ -d "$d/example" ] || continue
   bash "$SKILL/scripts/new_video.sh" "$s" "$s" --dir "$T" >> "$LOG" 2>&1 || { note "$s" "FAILED to create (see $LOG)"; fail=1; continue; }
   (
     cd "$P" || exit 1; echo "== $s"

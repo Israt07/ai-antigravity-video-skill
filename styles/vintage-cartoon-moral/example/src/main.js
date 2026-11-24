@@ -68,8 +68,8 @@ function draw(t) {
   // 1930s Film Post-Effects (Scanlines, Film Grain, Dust, Vignette, Flicker)
   applyVintagePostEffects(t, sh.mood || 'warm');
 
-  // Burn-in Captions (Bold white with heavy ink outline, bottom third)
-  drawCaption(t);
+  // Burn-in Captions (Bold white with heavy ink outline, with per-shot y placement to avoid faces)
+  drawCaption(t, sh?.capY);
 }
 
 (async () => {
